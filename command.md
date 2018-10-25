@@ -18,10 +18,10 @@
 ```
 ## 熟悉node命令
 
-npm install -g
-npm cache clean 
-如果安装失败，可以使用 npm cache clean 清理缓存，然后再重新安装
-vue init webpack    //初始化vue
-cnpm install      //安装依赖
-npm run dev       //启动项目
-npm run build     //发布项目 生成dist目录  只要把dist目录上的文件发布上去就行了
+- npm install -g
+- npm cache clean 
+- 如果安装失败，可以使用 npm cache clean 清理缓存，然后再重新安装
+- vue init webpack    //初始化vue
+- cnpm install      //安装依赖
+- npm run dev       //启动项目
+- npm run build     //发布项目 生成dist目录  只要把dist目录上的文件发布上去就行了
