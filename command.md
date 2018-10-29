@@ -19,8 +19,7 @@
 ## 熟悉node命令
 
 - npm install -g
-- npm cache clean 
-- 如果安装失败，可以使用 npm cache clean 清理缓存，然后再重新安装
+- npm cache clean     //如果安装失败，可以使用 npm cache clean 清理缓存，然后再重新安装
 - vue init webpack    //初始化vue
 - cnpm install      //安装依赖
 - npm run dev       //启动项目
