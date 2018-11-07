@@ -10,6 +10,8 @@
 - <https://zhitu.isux.us/>智图可以自动化优化图片
 - <http://www.bitbug.net/>制作网站ico图标
 - <https://bennettfeely.com/clippy/>使用css3新属性clip-path自定义显示某个形状的图片
+- inkscape.ext    将图片转化为svg
+- <https://icomoon.io/#hi>可以将SVG图片转换为ICONFONT
 ## 文字符号
 - 比如查找字符实体
 # css库
