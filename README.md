@@ -14,7 +14,6 @@
 
 ## 目录
 
-1. **[调用堆栈](#1-调用堆栈)**
 2. **[原始类型](#2-原始类型)**
 3. **[值类型和引用类型](#3-值类型和引用类型)**
 4. **[隐式, 显式, 名义和鸭子类型](#4-隐式-显式-名义和鸭子类型)**
@@ -54,21 +53,12 @@
 
 ### 文章
 
-- :book: [Call Stack — MDN](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack)
 - :book: [[译] JavaScript 如何工作：对引擎、运行时、调用堆栈的概述 —— 掘金](https://juejin.im/post/5a05b4576fb9a04519690d42#comment)
 - :book: [[译] 理解 JavaScript 中的执行上下文和执行栈 —— 掘金](https://juejin.im/post/5ba32171f265da0ab719a6d7)
 - :book: [这一次，彻底弄懂 JavaScript 执行机制 —— 掘金](https://juejin.im/post/59e85eebf265da430d571f89)
 - :book: [解读 JavaScript 之引擎、运行时和堆栈调用 —— 开源中国](https://www.oschina.net/translate/how-does-javascript-actually-work-part-1)
 - :book: [Tasks, microtasks, queues and schedules —— Jake Archibald](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 
-### 视频
-
-- :tv: [What is the event loop anyway? —— 腾讯视频(英文字幕)](https://v.qq.com/x/page/h0372bld8re.html?ptag=qqbrowser)
-- :tv: [Understanding The JavaScript Call Stack, Event Queue, Event Table, & Event Loop —— Bilibili](https://www.bilibili.com/video/av33824933/)
-- :tv: [JS 中的变量提升、堆栈内存及闭包详解 —— Acfun](http://www.acfun.cn/v/ac4495641)
-- :tv: [事件循环模型 —— PHP 中文网](http://www.php.cn/code/21194.html)
-
-**[:arrow_up: 返回目录](#目录)**
 
 ---
 
