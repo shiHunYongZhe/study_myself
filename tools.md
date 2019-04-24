@@ -12,15 +12,11 @@
 - <https://bennettfeely.com/clippy/>使用css3新属性clip-path自定义显示某个形状的图片
 - inkscape.ext    将图片转化为svg
 - <https://icomoon.io/#hi>可以将SVG图片转换为ICONFONT
-## 文字符号
-- 比如查找字符实体
 # css库
 - 1.Pure CSS
-只有3.8KB的缩小和压缩，但是充满了功能!多年来，纯CSS一直是我选择的轻量级框架，包括与外包软件开发团队合作。
+只有3.8KB的缩小和压缩，但是充满了功能!
 - 2、weui
 微信官方设计团队，实现的基于微信的UI库，已经实现了大部分的组件,有按钮、对话框、文章列表、Toast等等。
 ## js组件
 - artDialog——经典、优雅的网页对话框控件。
 - art-template 是一个简约、超快的模板引擎。
-## node.js组件
-- font-spider是一个智能 WebFont 压缩工具，它能自动分析出页面使用的 WebFont 并进行按需压缩。
