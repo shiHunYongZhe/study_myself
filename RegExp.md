@@ -10,3 +10,7 @@
 - 日期格式：^\d{4}-\d{1,2}-\d{1,2}
 - 一年的12个月(01～09和1～12)：^(0?[1-9]|1[0-2])$
 - 一个月的31天(01～09和1～31)：^((0?[1-9])|((1|2)[0-9])|30|31)$
+
+
+
+用正则表达式限制只能输入中文：onkeyup="value=value.replace(/[^u4E00-u9FA5]/g,'') "onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[^u4E00-u9FA5]/g,''))" 
