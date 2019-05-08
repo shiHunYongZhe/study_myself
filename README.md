@@ -51,28 +51,13 @@
 
 ## 1. 调用堆栈
 
-### 文章
-
 - :book: [这一次，彻底弄懂 JavaScript 执行机制 —— 掘金](https://juejin.im/post/59e85eebf265da430d571f89)
 
 ---
 
 ## 2. 原始类型
 
-### 文章
-
-- :book: [原始数据 —— MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/Primitive)
-- :book: [ECMAScript 原始类型 —— W3school](http://www.w3school.com.cn/js/pro_js_primitivetypes.asp)
-- :book: [How numbers are encoded in JavaScript —— Dr. Axe](http://2ality.com/2012/04/number-encoding.html)
-- :book: [每一个 JavaScript 开发者应该了解的浮点知识 —— 颜海镜](https://yanhaijing.com/javascript/2014/03/14/what-every-javascript-developer-should-know-about-floating-points/)
 - :book: [JavaScript 标准参考教程(基本语法之数值) —— 阮一峰](https://wangdoc.com/javascript/types/number.html)
-
-### 视频
-
-- :tv: [javascript 六种数据类型 —— 慕课网](https://www.imooc.com/video/5674)
-- :tv: [javascript 视频教程(数据类型) —— PHP 中文网](http://www.php.cn/code/5808.html)
-
-**[:arrow_up: 返回目录](#目录)**
 
 ---
 
