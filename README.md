@@ -13,7 +13,7 @@
 ---
 
 ## 目录
-
+1. **[调用堆栈](#1-调用堆栈)**
 2. **[原始类型](#2-原始类型)**
 3. **[值类型和引用类型](#3-值类型和引用类型)**
 4. **[隐式, 显式, 名义和鸭子类型](#4-隐式-显式-名义和鸭子类型)**
@@ -66,7 +66,6 @@
 - :book: [How numbers are encoded in JavaScript —— Dr. Axe](http://2ality.com/2012/04/number-encoding.html)
 - :book: [每一个 JavaScript 开发者应该了解的浮点知识 —— 颜海镜](https://yanhaijing.com/javascript/2014/03/14/what-every-javascript-developer-should-know-about-floating-points/)
 - :book: [JavaScript 标准参考教程(基本语法之数值) —— 阮一峰](https://wangdoc.com/javascript/types/number.html)
-- :book: [The Secret Life of JavaScript Primitives —— Angus Croll](https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
 
 ### 视频
 
