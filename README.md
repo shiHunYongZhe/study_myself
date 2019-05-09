@@ -1,14 +1,18 @@
-# study_myself
-自学之路
-## 简介
+# 自学之路
+## 基础掌握
+- 学习html css js  之后html5 css3 es6(先大概了解)
+- 了解ps的切图
 
-这个项目是为了帮助开发者掌握 JavaScript 概念而创立的。它不是必备，但在未来学习（JavaScript）中，可以作为一篇指南。
+## 进阶
+- 使用emmet快速熟悉敲打代码
+- 使用markdown做笔记 后缀为.md
+- 了解css预处理器scss、less、stulus,js常用库jquery、bootstrap
 
-## 更新
-
-- 文章的排序优化，前面的文章是介绍概念，后面的文章是深入解读。
-- 将原文的 "高阶函数" 和 "map, reduce, filter" 合并为 "map, reduce, filter 等高阶函数"
-- 增加 "promise" 概念(替换删除的 "高阶函数")
+## 工作
+- 学习git工作流
+- 学习node的npm工具(node.js偏向于后端,可暂时不学)
+- 了解grunt gulp webpack CMD AMD Common.js的区别，主要使用webpack和Common.js
+- Vue React Angular选其一, 我选vue，学会了Vue，React也容易入门
 
 ---
 
