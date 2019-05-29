@@ -16,7 +16,19 @@
 用正则表达式限制只能输入中文：onkeyup="value=value.replace(/[^u4E00-u9FA5]/g,'') "onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[^u4E00-u9FA5]/g,''))" 
 
 
-$1、$2、...、$99	与 regexp 中的第 1 到第 99 个子表达式相匹配的文本。
-$&	与 regexp 相匹配的子串。
-$`	位于匹配子串左侧的文本。
-$'	位于匹配子串右侧的文本。
+- 字符串replace方法的第二个参数可以使用美元符号$，用来指代所替换的内容。
+```
+$&：匹配的子字符串。
+$`：匹配结果前面的文本。
+$’：匹配结果后面的文本。
+$n：匹配成功的第n组内容，n是从1开始的自然数。
+$$：指代美元符号$。
+```
+- 例子
+```
+'hello world'.replace(/(\w+)\s(\w+)/, '$2 $1')
+// "world hello"
+
+'abc'.replace('b', '[$`-$&-$\']')
+// "a[a-b-c]c"
+```
