@@ -12,7 +12,7 @@
 - 学习git工作流
 - 学习node的npm工具(node.js偏向于后端,可暂时不学)
 - 了解grunt gulp webpack CMD AMD Common.js的区别，主要使用webpack和Common.js
-- Vue React Angular选其一, 我选vue，学会了Vue，React也容易入门
+- Vue React Angular, 一开始学习vue，学会了Vue，React也容易入门，Angular先不做考虑
 
 ---
 
