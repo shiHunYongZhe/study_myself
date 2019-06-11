@@ -1,3 +1,4 @@
+# vscode关于eslint的问题
 ## 安装插件： vetur
 
 vscode 的插件安装完成后还不用重启整个程序，只要重新加载下工作区窗口就可以了
@@ -24,3 +25,5 @@ vscode 的插件安装完成后还不用重启整个程序，只要重新加载�
         "plugins": ["html"]
     },
 ```
+# 初始化vue项目，报错This is probably not a problem with npm,there is likely additional logging output above
+npm install之后，运行 npm i -D webpack-dev-server@2.9.7
