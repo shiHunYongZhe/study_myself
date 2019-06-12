@@ -3,10 +3,17 @@
 - 学习html css js  之后html5 css3 es6(先大概了解)
 - 了解ps的切图
 
+## 软件使用
+- sublime 快速查看html代码
+- vscode 工程级编辑器
+- wamp/phpstudy php本地服务器
+- Geogle 浏览器，调试专用
+- Postman - POST 接口调试终结者，异常强大的接口调试工具
 ## 进阶
 - 使用emmet快速熟悉敲打代码
 - 使用markdown做笔记 后缀为.md
 - 了解css预处理器scss、less、stulus,js常用库jquery、bootstrap
+
 
 ## 工作
 - 学习git工作流
