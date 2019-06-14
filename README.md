@@ -14,7 +14,7 @@
 - 使用markdown做笔记 后缀为.md
 - 了解css预处理器scss、less、stulus,js常用库jquery、bootstrap
 - 不要去学习算法（困难而且没必要）
-
+- 后端首先学习node，次要java，php暂不做考虑
 ## 工作
 - 学习git工作流
 - 学习node的npm工具(node.js偏向于后端,可暂时不学)
