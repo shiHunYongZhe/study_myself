@@ -13,7 +13,7 @@
 - 使用emmet快速熟悉敲打代码
 - 使用markdown做笔记 后缀为.md
 - 了解css预处理器scss、less、stulus,js常用库jquery、bootstrap
-
+- 不要去学习算法（困难而且没必要）
 
 ## 工作
 - 学习git工作流
