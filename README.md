@@ -33,8 +33,6 @@
 ## 目录
 1. **[调用堆栈](#1-调用堆栈)**
 2. **[原始类型](#2-原始类型)**
-3. **[值类型和引用类型](#3-值类型和引用类型)**
-4. **[隐式, 显式, 名义和鸭子类型](#4-隐式-显式-名义和鸭子类型)**
 5. **[== 与 ===, typeof 与 instanceof](#5--vs--typeof-vs-instanceof)**
 6. **[this, call, apply 和 bind](#6-this-call-apply-和-bind)**
 7. **[函数作用域, 块级作用域和词法作用域](#7-函数作用域-块级作用域和词法作用域)**
@@ -77,40 +75,6 @@
 
 - :book: [JavaScript 标准参考教程(基本语法之数值) —— 阮一峰](https://wangdoc.com/javascript/types/number.html)
 
----
-
-## 3. 值类型和引用类型
-- :book: [ECMAScript 引用类型 —— W3school](http://www.w3school.com.cn/js/pro_js_referencetypes.asp)
-
----
-
-## 4. 隐式, 显式, 名义和鸭子类型
-
-### 文章
-
-- :book: [ECMAScript 类型转换 —— W3school](http://www.w3school.com.cn/js/pro_js_typeconversion.asp)
-- :book: [JavaScript 的怪癖 1：隐式类型转换 —— justjavac](http://justjavac.com/javascript/2013/04/08/javascript-quirk-1-implicit-conversion-of-values.html)
-- :book: [JavaScript 运算符规则与隐式类型转换详解 —— 掘金](https://juejin.im/post/59ad2585f265da246a20e026)
-- :book: [聊一聊 JS 中的隐式类型转换 —— SegmentFault](https://segmentfault.com/a/1190000004482388)
-- :book: [有趣的 JavaScript 隐式类型转换 —— 博客园](https://www.cnblogs.com/yugege/p/5277883.html)
-- :book: [JavaScript 显式类型转换与隐式类型转换 —— CSDN](https://blog.csdn.net/yangjvn/article/details/48284163)
-- :book: [你不知道的 JavaScript（中卷）强制类型转换 —— 简书](https://www.jianshu.com/p/777a89b4ed9a)
-- :book: [你懂 JavaScript 嗎？#8 強制轉型 —— cythilya](https://ithelp.ithome.com.tw/articles/10201512)
-- :book: [动态类型语言和鸭子类型 —— 曾探](http://book.51cto.com/art/201505/475153.htm)
-- :book: [Nominal & Structural Typing —— flow](https://flow.org/en/docs/lang/nominal-structural/)
-- :book: [What exactly is Type Coercion in Javascript? —— stackoverflow](https://stackoverflow.com/questions/19915688/what-exactly-is-type-coercion-in-javascript)
-- :book: [You Don't Know JS: Types & Grammar —— github](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/ch4.md)
-
-### 视频
-
-- :tv: [javascript 隐式转换 —— 慕课网](https://www.imooc.com/video/5675)
-- :tv: [Javascript 基础加强-类型转换 —— 黑马程序员](http://www.le.com/ptv/vplay/27767009.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-<div id="5--vs--typeof-vs-instanceof"></div>
 
 ## 5. == vs ===, typeof vs instanceof
 
