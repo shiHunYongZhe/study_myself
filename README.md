@@ -1,23 +1,24 @@
 # 自学之路
 ## 基础掌握
+- 寻找基础自学资料可在哔哩哔哩上找，光是学习里面的视频就能够找到一份工作了（视频最好选择3年以内的，老旧的视频没有参考价值）
 - 学习html css js  之后html5 css3 es6(先大概了解)
-- 了解ps的切图
+- 熟悉ps的切图
 
 ## 软件使用
 - sublime 快速查看html代码
 - vscode 工程级编辑器
-- wamp/phpstudy php本地服务器
+- wamp/ pphpstudyhp本地服务器
 - Geogle 浏览器，调试专用
 - Postman - POST 接口调试终结者，异常强大的接口调试工具
 ## 进阶
 - 使用emmet快速熟悉敲打代码
 - 使用markdown做笔记 后缀为.md
 - 了解css预处理器scss、less、stulus,js常用库jquery、bootstrap
-- 不要去学习算法（困难而且没必要）
-- 后端首先学习node，次要java，php暂不做考虑
+- 不要盲目去学习算法（困难而且没必要）
+- 后端首先学习node，次要php，java
 ## 工作
 - 学习git工作流
-- 学习node的npm工具(node.js偏向于后端,可暂时不学)
+- 学习node的npm工具
 - 了解grunt gulp webpack CMD AMD Common.js的区别，主要使用webpack和Common.js
 - Vue React Angular, 一开始学习vue，学会了Vue，React也容易入门，Angular先不做考虑
 ## 性能测试工具
