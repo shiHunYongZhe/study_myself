@@ -7,7 +7,7 @@
 ## 软件使用
 - sublime 快速查看html代码
 - vscode 工程级编辑器
-- wamp/ pphpstudyhp本地服务器
+- wamp/ phpstudy本地服务器
 - Geogle 浏览器，调试专用
 - Postman - POST 接口调试终结者，异常强大的接口调试工具
 ## 进阶
@@ -19,7 +19,8 @@
 ## 工作
 - 学习git工作流
 - 学习node的npm工具
-- 了解grunt gulp webpack CMD AMD Common.js的区别，主要使用webpack和Common.js
+- 了解grunt gulp webpack 
+CMD AMD Common.js的区别，主要使用webpack和Common.js
 - Vue React Angular, 一开始学习vue，学会了Vue，React也容易入门，Angular先不做考虑
 ## 性能测试工具
 - 阿里云PTS
