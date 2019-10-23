@@ -1,8 +1,30 @@
 在安装了git之后，个人总是忘记配置git config的命令，以此记录一下：
-# 先拿到远程代码再进行开发的
+## 正常流程
+###  配置用户名和邮箱的命令
+
+- git config --global user.name "yourgithubname"
+
+- git config --global user.email "youreamil@email.com"
+
+上面两句命令用于配置标示身份，让github协作开发者可以明白你是谁。
+
+git config –list 查看config配置
+### 关联远程仓库
+
+首先必须明确一点：
+本地Git仓库和GitHub仓库之间的传输是通过SSH加密的
+- 创建SSH KEY。打开Shell(Windows下打开Git Bash)，创建SSH KEY：`ssh-keygen -t rsa -C “youreamil@email.com”`，可以一直回车，直到创建出了image
+- 一切顺利的话，可以在用户主目录里找到.shh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH KEY的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人
+- 登录GitHub，打开”Account settings”，”SSH Keys”页面： 点击”Add SSH Key”， 填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+`git remote add origin [remote-url]` 可以给本地库与远程库建立连接将本地的仓库和远程的仓库进行关联（不要使用https，使用ssh）（使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令
+`git push -u origin master` 将工作区的文件推送到远程仓库
+-u参数不但会把本地的master分支内容推送到远程新的master分支，还会在它们之间建立联系，以后命令可以简化为git push
+
+
+## 先拿到远程代码再进行开发的
 - git clone [url] 克隆远程库，默认是master分支 
 - git clone -b [branchname] [url] 克隆远程库的分支 
-# 直接本地开发的
+## 直接本地开发的
 新建文件夹demo并打开，右键git init，之后直接看下方的本地关联远程仓库（注意文件夹名称要与远程仓库名一致，比如这里的远程仓库名应为git@github.com:ShiHunYongZhe/demo.git）
 #### 开始工作
 - git add  把文件添加到缓存区（索引区），Git会自动为我们创建第一个分支master，以及指向master的第一个指针叫HEAD。
@@ -18,24 +40,8 @@
 
 
 
-## 正常流程
-###  配置用户名和邮箱的命令
-- git config --global user.name "yourgithubname"
-- git config --global user.email "youreamil@email.com"
-上面两句命令用于配置标示身份，让github协作开发者可以明白你是谁。
-git config –list 查看config配置
-### 关联远程仓库
-首先必须明确一点： 
-本地Git仓库和GitHub仓库之间的传输是通过SSH加密的。
-- 创建SSH KEY。打开Shell(Windows下打开Git Bash)，创建SSH KEY：`ssh-keygen -t rsa -C “youreamil@email.com”`，可以一直回车，直到创建出了image
-- 一切顺利的话，可以在用户主目录里找到.shh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH KEY的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
-- 登录GitHub，打开”Account settings”，”SSH Keys”页面： 点击”Add SSH Key”， 填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。
-`git remote add origin [remote-url]` 可以给本地库与远程库建立连接
 
->将本地的仓库和远程的仓库进行关联（不要使用https，使用ssh）（使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令）
->
-`git push -u origin master` 将工作区的文件推送到远程仓库
--u参数不但会把本地的master分支内容推送到远程新的master分支，还会在它们之间建立联系，以后命令可以简化为git push
+
 
 ##### 多人协作
 - 当从远程克隆仓库时，联系自动建立，origin默认为远程库。
@@ -55,8 +61,8 @@ ps:git本地新建一个分支后，必须要做远程分支关联。如果没�
 
 - 之后切换为master分支`git checkout master`，然后`git merge dev`将dev分支合并到master分支，成功之后`git branch -d dev`删除分支dev
 
-配置文件放哪了？每个仓库的Git配置文件都放在.git/config文件中：
-$ cat .git/config 
+配置文件放哪了？每个仓库的Git配置文件都放在.gitconfig文件中：
+$ cat .gitconfig 
 ```
 [core]
 [remote "origin"]
