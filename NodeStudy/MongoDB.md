@@ -1,7 +1,8 @@
 # 安装MongoDB
-将`C:\Program Files\MongoDB\Server\3.0\bin`路径加入到系统的path环境变量中（能在系统的任何盘符，使用mongo命令了）
+上网下载并安装MongoDB程序后，将`C:\Program Files\MongoDB\Server\3.0\bin`路径加入到系统的path环境变量中（能在系统的任何盘符，使用mongo命令了）
 ```
 打开cmd
+输入mongo -v(有出现版本则可正常使用了)
 mongo --dbpath data文件路径（使用过程中不可关闭）
 使用数据库服务端，之后客户端操作的data数据都保存在文件路径中
 mongod（再开一个cmd）
