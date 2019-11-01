@@ -282,9 +282,6 @@ gulp.task('testLess', function() {
 		.pipe(gulp.dest('src/css'));/*将会在src/css下生成index.css*/
 });
 
-gulp.task('testLess', function() {
-	gulp.src('src/less/in')
-})
 // html代码优化和压缩
 gulp.task('testHtmlmin', function() {
 	var options = {
