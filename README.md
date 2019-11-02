@@ -32,7 +32,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 1. **[调用堆栈](#1-调用堆栈)**
 5. **[== 与 ===, typeof 与 instanceof](#5--vs--typeof-vs-instanceof)**
 6. **[this, call, apply 和 bind](#6-this-call-apply-和-bind)**
-7. **[函数作用域, 块级作用域和词法作用域](#7-函数作用域-块级作用域和词法作用域)**
 8. **[闭包](#8-闭包)**
 9. **[map, reduce, filter 等高阶函数](#9-map-reduce-filter-等高阶函数)**
 10. **[表达式和语句](#10-表达式和语句)**
@@ -63,63 +62,25 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 ---
 
 ## 1. 调用堆栈
-
 - :book: [这一次，彻底弄懂 JavaScript 执行机制 —— 掘金](https://juejin.im/post/59e85eebf265da430d571f89)
-
----
-
 ## 5. == vs ===, typeof vs instanceof
 
-### 文章
 对于=== 和 Object.is  的不同，只要记住
 在 === 中 NaN !== NaN ,而 +0 === -0
 然而 Object.is中 Object.is(NaN, NaN) 为true ，而Object.is(+0, -0) 则为false
 
-
 - :book: [== vs === in Javascript —— CSDN](https://blog.csdn.net/w97531/article/details/82255225)
 - :book: [深入理解 javascript 之 typeof 和 instanceof —— CSDN](https://blog.csdn.net/mevicky/article/details/50353881)
 - :book: [一张图看懂 Function 和 Object 的关系及简述 instanceof 运算符 —— 掘金](https://juejin.im/post/58358606570c35005e4142bd)
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 6. this, call, apply 和 bind
 
 ### 文章
 
-- :book: [Javascript 的 this 用法 —— 阮一峰](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html)
 - :book: [学会 JS 的 this 这一篇就够了，根本不用记 —— 简书](https://www.jianshu.com/p/6b4333e78bf5)
 - :book: [[译] this（他喵的）到底是什么 — 理解 JavaScript 中的 this、call、apply 和 bind —— 掘金](https://juejin.im/post/5b9f176b6fb9a05d3827d03f)
 - :book: [this、apply、call、bind —— 掘金](https://juejin.im/post/59bfe84351882531b730bac2)
-- :book: [使用 call、apply 和 bind 解决 js 中烦人的 this，事件绑定时的 this 和传参问题 —— 博客园](https://www.cnblogs.com/tingyu-blog/p/6212392.html)
 - :book: [call、apply 和 bind 的原生实现 —— github](https://github.com/Abiel1024/blog/issues/16)
-### 视频
-
-- :tv: [JavaScript 关于 this 关键字解释 —— 爱奇艺](https://www.iqiyi.com/w_19rr1augsd.html)
-- :tv: [JS 关于作用域闭包和 this 的综合面试题 —— 百度视频](http://baidu.iqiyi.com/watch/845335533383874688.html?page=videoMultiNeed)
-- :tv: [js 面向对象闭包数组 12.函数中的 this —— 乐视视频](http://www.le.com/ptv/vplay/27478413.html?ch=baidu_s)
-- :tv: [1.3.10-this 指向及 this 应用 —— 乐视视频](http://www.le.com/ptv/vplay/24835911.html?ch=baidu_s)
-- :tv: [珠峰培训 JavaScript 开发课程：关于 this 关键字、闭包作用域 —— 网易云课堂](https://study.163.com/course/introduction/590005.htm)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 7. 函数作用域, 块级作用域和词法作用域
-
-### 文章
-
-- :book: [变量作用域与解构赋值 —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344993159773a464f34e1724700a6d5dd9e235ceb7c000)
-- :book: [学习 Javascript 闭包（Closure） —— 阮一峰](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
-- :book: [JavaScript 中词法作用域、闭包与跳出闭包 —— SegmentFault](https://segmentfault.com/a/1190000006671020)
-- :book: [JavaScript 深入之词法作用域和动态作用域 —— 掘金](https://juejin.im/entry/58e70077b123db15eb88dc7e)
-- :book: [深入理解闭包之前置知识 → 作用域与词法作用域 —— 掘金](https://juejin.im/post/5afb0ae56fb9a07aa2138425)
-- :book: [What is lexical scope? —— stackoverflow](https://stackoverflow.com/questions/1047454/what-is-lexical-scope)
-- :book: [You Don't Know JS: Scope & Closures —— Kyle Simpson](https://github.com/fishenal/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch2.md)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 8. 闭包
 
@@ -134,13 +95,7 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [js 匿名自执行函数中闭包的高级使用 —— 掘金](https://juejin.im/entry/5800eb7da22b9d005b36156e)
 - :book: [高效使用 JavaScript 闭包 —— 掘金](https://juejin.im/entry/59df405251882551bf7e58c6#comment)
 
-### 视频
-
-- :tv: [JavaScript 闭包和闭包面试题 —— 爱奇艺](http://www.iqiyi.com/w_19rr1amael.html)
-- :tv: [js 面向对象闭包数组 11.闭包 —— 乐视](http://www.le.com/ptv/vplay/27478410.html)
-- :tv: [白贺翔\_函数(闭包) —— 乐视](http://www.le.com/ptv/vplay/30505852.html)
-
-**[:arrow_up: 返回目录](#目录)**
+**[:arrow_up: 返回目录](#进阶)**
 
 ---
 
