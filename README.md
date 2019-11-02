@@ -63,17 +63,12 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [一张图看懂 Function 和 Object 的关系及简述 instanceof 运算符 —— 掘金](https://juejin.im/post/58358606570c35005e4142bd)
 
 ## 6. this, call, apply 和 bind
-
-### 文章
-
 - :book: [学会 JS 的 this 这一篇就够了，根本不用记 —— 简书](https://www.jianshu.com/p/6b4333e78bf5)
 - :book: [[译] this（他喵的）到底是什么 — 理解 JavaScript 中的 this、call、apply 和 bind —— 掘金](https://juejin.im/post/5b9f176b6fb9a05d3827d03f)
 - :book: [this、apply、call、bind —— 掘金](https://juejin.im/post/59bfe84351882531b730bac2)
 - :book: [call、apply 和 bind 的原生实现 —— github](https://github.com/Abiel1024/blog/issues/16)
 
 ## 12. Promise
-
-### 文章
 
 - :book: [使用 promises —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 - :book: [Promise —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
@@ -86,8 +81,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ## 15. 算法
 
-### 文章
-
 - :book: [十大经典排序算法总结（JavaScript 描述） —— 掘金](https://juejin.im/post/57dcd394a22b9d00610c5ec8)
 - :book: [在 JavaScript 中学习数据结构与算法 —— 掘金](https://juejin.im/post/594dfe795188250d725a220a#comment)
 - :book: [JS 中可能用得到的全部的排序算法 —— 掘金](https://juejin.im/post/58c9d5fb1b69e6006b686bce)
@@ -97,24 +90,12 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ## 16. 数据结构
 
-### 文章
-
 - :book: [来我们浅谈一下 js 的数据结构 —— 简书](https://www.jianshu.com/p/5e0e8d183102)
 - :book: [JavaScript 中的算法与数据结构 —— 简书](https://www.jianshu.com/nb/16835496)
 - :book: [学 JS 必看-JavaScript 数据结构深度剖析 —— 大道至简的博客](http://blog.sina.com.cn/s/blog_7b9c5e4101017mjt.html)
 - :book: [js 中基础数据结构数组去重问题 —— 掘金](https://juejin.im/entry/586effe0da2f600053d85a9a)
 
-### 视频
-
-- :tv: :tv: [JavaScript 数据结构-运算符 —— 乐视](http://www.le.com/ptv/vplay/27606964.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 17. 消息队列和事件循环
-
-### 文章
 
 - :book: [并发模型与事件循环 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)
 - :book: [JavaScript 运行机制详解：再谈 Event Loop —— 阮一峰](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
@@ -123,9 +104,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [JS 事件循环机制（event loop）之宏任务、微任务 —— SegmentFault](https://segmentfault.com/a/1190000014940904#articleHeader7)
 - :book: [JavaScript：彻底理解同步、异步和事件循环 —— SegmentFault](https://segmentfault.com/a/1190000004322358)
 
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 19. 继承, 多态和代码复用
 
@@ -139,26 +117,15 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [深入理解 JavaScript：代码复用模式(推荐篇) —— 汤姆大叔](http://www.cnblogs.com/TomXu/archive/2012/04/24/2438050.html)
 - :book: [深入理解 JavaScript：代码复用模式(避免篇) —— 汤姆大叔](https://www.cnblogs.com/TomXu/archive/2012/04/23/2438005.html)
 
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 20. 按位操作符, 类数组对象和类型化数组
-
-### 文章
 
 - :book: [按位操作符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
 - :book: [类数组对象 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - :book: [类型化数组 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - :book: [JavaScript ArrayBuffer 浅析 —— 博客园](https://www.cnblogs.com/gradolabs/p/4762134.html)
 
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 21. DOM 树和渲染过程
-
-### 文章
 
 - :book: [如何创建一个 DOM 树 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree)
 - :book: [HTML DOM 节点 —— W3school](http://www.w3school.com.cn/htmldom/dom_nodes.asp)
@@ -171,8 +138,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ## 25. 工厂函数和类
 
-### 文章
-
 - :book: [类 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - :book: [类和实例 —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00138682004077376d2d7f8cc8a4e2c9982f92788588322000)
 - :book: [Javascript 定义类（class）的三种方法 —— 阮一峰](http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html)
@@ -180,8 +145,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [JavaScript 创建对象之单例、工厂、构造函数模式 —— 掘金](https://juejin.im/entry/587992c961ff4b0065edf1ff)
 
 ## 26. 设计模式
-
-### 文章
 
 - :book: [设计模式 —— 阮一峰](http://javascript.ruanyifeng.com/library/designpattern.html)
 - :book: [JavaScript 设计模式 —— 掘金](https://juejin.im/post/59df4f74f265da430f311909)
@@ -191,16 +154,12 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ## 27. Memoization
 
-### 文章
-
 - :book: [JavaScript Memoization —— 司徒正美](https://www.cnblogs.com/rubylouvre/archive/2009/08/06/1540678.html)
 - :book: [memoization 提升递归效率 —— 博客园](https://www.cnblogs.com/yingshuizy/p/4517102.html)
 - :book: [如何提升 JavaScript 的递归效率 —— 51CTO](http://developer.51cto.com/art/201010/231513.htm)
 - :book: [JavaScript 高级技巧 Memoization —— SegmentFaut](https://segmentfault.com/a/1190000016703106)
 
 ## 28. 纯函数, 函数副作用和状态变化
-
-### 文章
 
 - :book: [纯函数(Pure Function) —— React.js 小书](http://huziketang.mangojuice.top/books/react/lesson32)
 - :book: [JavaScript Functional Programming：纯函数 —— 宁皓网](https://ninghao.net/blog/4634)
@@ -211,8 +170,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ## 29. 耗性能操作和时间复杂度
 
-### 文章
-
 - :book: [时间复杂度 O(log n) 意味着什么？ —— 掘金](https://juejin.im/entry/593f56528d6d810058a355f4)
 - :book: [算法的时间复杂度和空间复杂度 —— 掘金](https://juejin.im/entry/5a49f7d36fb9a0450a67b269)
 - :book: [算法（一）时间复杂度 —— 掘金](https://juejin.im/post/58d15f1044d90400691834d4)
@@ -220,8 +177,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [Time Complexity Analysis in JavaScript — Jennifer Bland](https://www.jenniferbland.com/time-complexity-analysis-in-javascript/)
 
 ## 30. JavaScript 引擎
-
-### 文章
 
 - :book: [javascript 引擎 —— 百度百科](https://baike.baidu.com/item/javascript引擎/5356108)
 - :book: [V8(JavaScript 引擎) —— 百度百科](https://baike.baidu.com/item/V8/6178125)
@@ -231,8 +186,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [V8 javascript 引擎 —— 博客园](https://www.cnblogs.com/weirdoQi/p/6609811.html)
 
 ## 32. 偏函数, 柯里化, Compose 和 Pipe
-
-### 文章.
 
 - :book: [Javascript 函数式编程之偏函数 —— CSDN](https://blog.csdn.net/qq_42129063/article/details/81874314)
 - :book: [JavaScript 专题之偏函数 —— SegmentFault](https://segmentfault.com/a/1190000010686144)
@@ -247,8 +200,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [JavaScript 函数式编程（二） —— @BuptStEve](https://github.com/BuptStEve/blog/issues/11)
 
 ## 33. 代码整洁之道
-
-### 文章
 
 - :book: [[译] JavaScript 代码整洁之道 —— 边城](https://www.zcfy.cc/article/clean-code-javascript-readme-md-at-master-ryanmcdermott-clean-code-javascript-github-2273.html)
 - :book: [Javascript 编程风格 —— 阮一峰](http://www.ruanyifeng.com/blog/2012/04/javascript_programming_style.html)
