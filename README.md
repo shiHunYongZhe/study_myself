@@ -32,10 +32,7 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 1. **[调用堆栈](#1-调用堆栈)**
 5. **[== 与 ===, typeof 与 instanceof](#5--vs--typeof-vs-instanceof)**
 6. **[this, call, apply 和 bind](#6-this-call-apply-和-bind)**
-8. **[闭包](#8-闭包)**
-9. **[map, reduce, filter 等高阶函数](#9-map-reduce-filter-等高阶函数)**
-10. **[表达式和语句](#10-表达式和语句)**
-11. **[变量提升](#11-变量提升)**
+
 12. **[Promise](#12-promise)**
 13. **[立即执行函数, 模块化, 命名空间](#13-立即执行函数-模块化-命名空间)**
 14. **[递归](#14-递归)**
@@ -82,64 +79,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [this、apply、call、bind —— 掘金](https://juejin.im/post/59bfe84351882531b730bac2)
 - :book: [call、apply 和 bind 的原生实现 —— github](https://github.com/Abiel1024/blog/issues/16)
 
-## 8. 闭包
-
-### 文章
-
-- :book: [闭包 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures)
-- :book: [ECMAScript 闭包（closure）—— w3school](http://www.w3school.com.cn/js/pro_js_functions_closures.asp)
-- :book: [学习 Javascript 闭包（Closure） —— 阮一峰](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
-- :book: [闭包 —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143449934543461c9d5dfeeb848f5b72bd012e1113d15000)
-- :book: [一次性搞懂 JavaScript 闭包 —— 简书](https://www.jianshu.com/p/796e903754f1)
-- :book: [JavaScript 闭包 —— SegmentFault](https://segmentfault.com/a/1190000006875662)
-- :book: [js 匿名自执行函数中闭包的高级使用 —— 掘金](https://juejin.im/entry/5800eb7da22b9d005b36156e)
-- :book: [高效使用 JavaScript 闭包 —— 掘金](https://juejin.im/entry/59df405251882551bf7e58c6#comment)
-
-**[:arrow_up: 返回目录](#进阶)**
-
----
-
-## 9. map, reduce, filter 等高阶函数
-
-### 文章
-
-- :book: [高阶函数 —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499355829ead974e550644e2ebd9fd8bb1b0dd721000)
-- :book: [ES5 中新增的 Array 方法详细说明 —— 张鑫旭](https://www.zhangxinxu.com/wordpress/2013/04/es5%e6%96%b0%e5%a2%9e%e6%95%b0%e7%bb%84%e6%96%b9%e6%b3%95/)
-- :book: [一张图看懂 JavaScript 中数组的迭代方法：forEach、map、filter、reduce、every、some —— 掘金](https://juejin.im/post/5835808067f3560065ed4ab2)
-- :book: [Transducing（上）－《JavaScript 轻量级函数式编程》 —— SegmentFault](https://segmentfault.com/a/1190000012127329)
-- :book: [JavaScript 函数式编程（三） —— @BuptStEve](https://github.com/BuptStEve/blog/issues/15)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 10. 表达式和语句
-
-### 文章
-
-- :book: [js 表达式与语句 —— 博客园](https://www.cnblogs.com/xianshenglu/p/8386918.html)
-- :book: [JS 表达式和语句的区别 —— SegmentFault](https://segmentfault.com/q/1010000004102804)
-- :book: [JavaScript 中的表达式（expression）和语句/声明（statement） —— CSDN](https://blog.csdn.net/mett_smith/article/details/78761247)
-- :book: [重讀 Axel 的 Javascript 中的 Expression vs Statement 一文 —— SegmentFault](https://segmentfault.com/a/1190000004565693)
-- :book: [Expressions versus statements in JavaScript —— Dr. Axel](http://2ality.com/2012/09/expressions-vs-statements.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 11. 变量提升
-
-### 文章
-
-- :book: [JavaScript 变量提升 —— 菜鸟教程](http://www.runoob.com/js/js-hoisting.html)
-- :book: [ES6 变量作用域与提升：变量的生命周期详解 —— 掘金](https://juejin.im/post/59905bea6fb9a03c34192c51)
-- :book: [[翻译] JavaScript Scoping and Hoisting —— SegmentFault](https://segmentfault.com/a/1190000004345355#articleHeader5)
-- :book: [JavaScript Scoping and Hoisting —— Ben Cherry](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 12. Promise
 
 ### 文章
@@ -153,44 +92,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [JavaScript Promise 迷你书（中文版）](https://juejin.im/entry/56499ae160b2d1404c4f8834)
 - :book: [JavaScript 进阶之路——认识和使用 Promise，重构你的 Js 代码 —— 博客园](https://www.cnblogs.com/yunfeifei/p/4453690.html)
 
-### 视频
-
-- :tv: [Promise 入门 —— 慕课网](https://www.imooc.com/learn/949)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 13. 立即执行函数, 模块化, 命名空间
-
-### 文章
-
-- :book: [Javascript 模块化编程（一）：模块的写法 —— 阮一峰](http://www.ruanyifeng.com/blog/2012/10/javascript_module.html)
-- :book: [javascript 模块化编程-详解立即执行函数表达式 —— 简书](https://www.jianshu.com/p/4dbf4a4c8ebb)
-- :book: [Javascript 的匿名函数与自执行 —— 掘金](https://juejin.im/entry/57fee360a22b9d005b1d9ae3)
-- :book: [前端模块化——技术选型 —— SegmentFault](https://segmentfault.com/a/1190000006966358)
-- :book: [谈谈 Js 前端模块化规范 —— SegmentFault](https://segmentfault.com/a/1190000015991869#articleHeader8)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 14. 递归
-
-### 文章
-
-- :book: [求解释 js 递归 —— SegmentFault](https://segmentfault.com/q/1010000003942347)
-- :book: [JavaScript 中的递归 —— 掘金](https://juejin.im/post/5948c0d8fe88c2006a939e2a)
-- :book: [递归（上）－《JavaScript 轻量级函数式编程》 —— 掘金](https://juejin.im/post/59c1d91d6fb9a00a53275f79)
-- :book: [递归（下）－《JavaScript 轻量级函数式编程》 —— 掘金](https://juejin.im/post/59c87fb46fb9a00a437b1a2e)
-- :book: [尾调用和尾递归 —— 掘金](https://juejin.im/post/5acdd7486fb9a028ca53547c)
-- :book: [几个经典递归问题用 js 实现 —— CSDN](https://blog.csdn.net/qianqianstd/article/details/75807462)
-- :book: [递归函数的几个例子 —— CSDN](https://blog.csdn.net/x_i_xw/article/details/72026868)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 15. 算法
 
 ### 文章
@@ -201,14 +102,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [JS 家的排序算法 —— 简书](https://www.jianshu.com/p/1b4068ccd505)
 - :book: [前端常见算法的 JS 实现 —— SegmentFault](https://segmentfault.com/a/1190000008593715)
 - :book: [前端面试中的常见的算法问题 ——蒲小花的博客](https://www.jackpu.com/qian-duan-mian-shi-zhong-de-chang-jian-de-suan-fa-wen-ti/)
-
-### 视频
-
-- :tv: [Javascript 实现二叉树算法 —— 慕课网](https://www.imooc.com/learn/888)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 16. 数据结构
 
@@ -237,31 +130,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [深入浅出 Javascript 事件循环机制 —— 知乎](https://zhuanlan.zhihu.com/p/26229293)
 - :book: [JS 事件循环机制（event loop）之宏任务、微任务 —— SegmentFault](https://segmentfault.com/a/1190000014940904#articleHeader7)
 - :book: [JavaScript：彻底理解同步、异步和事件循环 —— SegmentFault](https://segmentfault.com/a/1190000004322358)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 18. setTimeout, setInterval 和 requestAnimationFrame
-
-### 文章
-
-- :book: [Window setTimeout() 方法 —— 菜鸟教程](http://www.runoob.com/jsref/met-win-settimeout.html)
-- :book: [Window setInterval() 方法 —— 菜鸟教程](http://www.runoob.com/jsref/met-win-setinterval.html)
-- :book: [关于 setTimeout —— 掘金](https://juejin.im/post/5aa4c47af265da239866e236)
-- :book: [你不知道的 Javascript：有趣的 setTimeout —— 掘金](https://juejin.im/post/5a77f8ce5188257a6d635d76)
-- :book: [原来你是这样的 setTimeout —— 掘金](https://juejin.im/entry/5861ebf01b69e6006ce61d38)
-- :book: [setTimeout() 和 setInterval() 本质区别在哪里？ —— SegmentFault](https://segmentfault.com/q/1010000005989491)
-- book: [window.requestAnimationFrame —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
-- :book: [requestAnimationFrame 知多少？ —— 博客园](http://www.cnblogs.com/onepixel/p/7078617.html)
-- :book: [CSS3 动画那么强，requestAnimationFrame 还有毛线用？ —— 张鑫旭](https://www.zhangxinxu.com/wordpress/2013/09/css3-animation-requestanimationframe-tween-%e5%8a%a8%e7%94%bb%e7%ae%97%e6%b3%95/)
-- :book: [「JavaScript 定时器」setInterval、setTimeout 和 requestAnimationFrame 浅析 —— SegmentFault](https://segmentfault.com/a/1190000014661035)
-- :book: [翻译：setInterval 与 requestAnimationFrame 的时间间隔测试 —— SegmentFault](https://segmentfault.com/a/1190000000386368)
-- :book: [阿里前端面试题：requestAnimationFrame 实现类似 setInterval 的计时器 —— SegmentFault](https://segmentfault.com/q/1010000013909430)
-
-### 视频
-
-- :tv: [setTimeout 和 setInterval —— 优酷](http://v.youku.com/v_show/id_XNTA4OTQ0NzA0.html)
 
 **[:arrow_up: 返回目录](#目录)**
 
@@ -309,80 +177,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [操作 DOM —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434500494451273e6b3dec9d411d9ba841dee8caec45000)
 - :book: [原来 CSS 与 JS 是这样阻塞 DOM 解析和渲染的 —— 掘金](https://juejin.im/post/59c60691518825396f4f71a1)
 
-### 视频
-
-- :tv: [DOM 探索之基础详解篇 —— 慕课网](https://www.imooc.com/learn/488)
-- :tv: [DOM 事件探秘 —— 慕课网](https://www.imooc.com/learn/138)
-- :tv: [jQuery 基础(二)DOM 篇 —— 慕课网](https://www.imooc.com/learn/530)
-- :tv: [JS 操作 DOM 对象属性和方法 —— 爱奇艺](http://www.iqiyi.com/w_19rr19s08l.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 22. new 与构造函数, instanceof 与实例
-
-### 文章
-
-- :book: [构造函数与 new 命令 —— 阮一峰](http://javascript.ruanyifeng.com/oop/basic.html)
-- :book: [Javascript 面向对象编程（二）：构造函数的继承 —— 阮一峰](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
-- :book: [完整原型链详细图解(构造函数、原型、实例化对象) —— CSDN](https://blog.csdn.net/SpicyBoiledFish/article/details/71123162)
-- :book: [JavaScript 中构造函数与 new 操作符的实例详解 —— PHP 中文网](http://www.php.cn/js-tutorial-376246.html)
-- :book: [构造函数、实例、原型、原型链之间的关系 —— CSDN](https://blog.csdn.net/yin_991/article/details/80954453)
-- :book: [深入理解 JS—instanceof 和原型链 —— CSDN](https://blog.csdn.net/cecilia620/article/details/71158048)
-- :book: [前端基础进阶（九）：详解面向对象、构造函数、原型与原型链 —— 简书](https://www.jianshu.com/p/15ac7393bc1f)
-- :book: [js 用 new 实例化对象与直接调用的 this 的区别 —— 简书](https://www.jianshu.com/p/60ffc4831bff)
-- :book: [JavaScript 并非所有的东西都是对象 —— justjavac](http://justjavac.com/javascript/2012/12/22/javascript-values-not-everything-is-an-object.html)
-- :book: [JavaScript instanceof 运算符深入剖析 —— IBM](https://www.ibm.com/developerworks/cn/web/1306_jiangjj_jsinstanceof/)
-
-### 视频
-
-- :tv: [改良版的构造函数 —— 乐视](http://www.le.com/ptv/vplay/27766889.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 23. 原型继承与原型链
-
-### 文章
-
-- :book: [继承与原型链 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- :book: [构造函数、原型与原型链 —— github](https://github.com/bigdots/blog/issues/1)
-- :book: [原型及原型链 —— github(1269 Star)](https://github.com/stone0090/javascript-lessons/tree/master/2.5-Prototype)
-- :book: [理清 javascript 中的面向对象(一) 原型继承 —— SegmentFault](https://segmentfault.com/a/1190000004282206)
-- :book: [JavaScript：继承和原型链(译) —— justjavac](http://justjavac.com/2015/12/09/inheritance-and-the-prototype-chain.html)
-- :book: [三张图搞懂 JavaScript 的原型对象与原型链 —— 博客园](http://www.cnblogs.com/shuiyi/p/5305435.html)
-- :book: [一张图让你搞懂 JavaScript 的继承与原型链 —— CSDN](https://blog.csdn.net/the__apollo/article/details/76774698)
-- :book: [JS 高级--原型链(一看就懂，但 18 岁以下请绕道) —— CSDN](https://blog.csdn.net/xiaotao_css/article/details/72782416)
-- :book: [原型继承 —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344997013405abfb7f0e1904a04ba6898a384b1e925000)
-- :book: [JS 原型链与继承别再被问倒了 —— 掘金](https://juejin.im/post/58f94c9bb123db411953691b)
-- :book: [征服 JavaScript 面试系列：类继承和原型继承的区别 —— 掘金](https://juejin.im/entry/5885db221b69e600592253e7)
-
-### 视频
-
-- :tv: [JS 高级-07-原型链继承 —— 乐视](http://www.le.com/ptv/vplay/27552753.html)
-- :tv: [JS 原型对象和原型链简介 —— 腾讯视频](https://v.qq.com/x/page/b0511nwa7d3.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 24. Object.create 和 Object.assign
-
-### 文章
-
-- :book: [Object.create —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
-- :book: [Object.assign —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-- :book: [Object.create vs Object.assign —— 慕课网手记](https://www.imooc.com/article/17591)
-- :book: [JS 中的 Object.assign()、Object.create()、Object.defineProperty() —— CSDN](https://blog.csdn.net/DeepLies/article/details/52915143)
-- :book: [es6 中 object.create()和 object.assign() —— 风信子博客](http://www.onlyfordream.cn/2018/03/19/es6%E4%B8%ADobject-create%E5%92%8Cobject-assign/)
-- :book: [Object-Assign-Deep —— github](https://github.com/saikojosh/Object-Assign-Deep)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 25. 工厂函数和类
 
 ### 文章
@@ -392,10 +186,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [Javascript 定义类（class）的三种方法 —— 阮一峰](http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html)
 - :book: [【译】ES6 的工厂函数 —— 掘金](https://juejin.im/post/59c8c8756fb9a00a681ae5bd)
 - :book: [JavaScript 创建对象之单例、工厂、构造函数模式 —— 掘金](https://juejin.im/entry/587992c961ff4b0065edf1ff)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 26. 设计模式
 
@@ -407,14 +197,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [[面试专题]JS 设计模式 —— SegmentFault](https://segmentfault.com/a/1190000010914032)
 - :book: [JavaScript Patterns 中译本 —— github](https://github.com/lxj/javascript.patterns)
 
-### 视频
-
-- :tv: [HTML5 课程大纲 2-11JS 设计模式](https://tv.sohu.com/v/dXMvMjQwNzYwNzQ4Lzg5NzM2MDA3LnNodG1s.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 27. Memoization
 
 ### 文章
@@ -423,10 +205,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [memoization 提升递归效率 —— 博客园](https://www.cnblogs.com/yingshuizy/p/4517102.html)
 - :book: [如何提升 JavaScript 的递归效率 —— 51CTO](http://developer.51cto.com/art/201010/231513.htm)
 - :book: [JavaScript 高级技巧 Memoization —— SegmentFaut](https://segmentfault.com/a/1190000016703106)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 28. 纯函数, 函数副作用和状态变化
 
@@ -439,10 +217,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [原生 JavaScript 实现 state 状态管理系统 —— 博客园](http://www.cnblogs.com/zhangycun/p/9403335.html)
 - :book: [JavaScript 函数式编程 —— @BuptStEve](https://github.com/BuptStEve/blog/issues/10)
 
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 29. 耗性能操作和时间复杂度
 
 ### 文章
@@ -452,11 +226,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [算法（一）时间复杂度 —— 掘金](https://juejin.im/post/58d15f1044d90400691834d4)
 - :book: [Big O Search Algorithms in JavaScript —— Bradley Braithwaite](http://www.bradoncode.com/blog/2012/04/big-o-algorithm-examples-in-javascript.html)
 - :book: [Time Complexity Analysis in JavaScript — Jennifer Bland](https://www.jenniferbland.com/time-complexity-analysis-in-javascript/)
--
-
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 30. JavaScript 引擎
 
@@ -468,25 +237,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [V8 JavaScript 引擎：高性能的 ES2015+ —— justjavac](https://segmentfault.com/a/1190000010819020)
 - :book: [10 分钟理解 JS 引擎的执行机制 —— SegmentFaut](https://segmentfault.com/a/1190000012806637)
 - :book: [V8 javascript 引擎 —— 博客园](https://www.cnblogs.com/weirdoQi/p/6609811.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 31. 二进制, 十六进制, 十进制, 科学记数法
-
-### 文章
-
-- :book: [二、八、十、十六进制转换(图解篇) —— 博客园](http://www.cnblogs.com/gaizai/p/4233780.html)
-- :book: [JavaScript 读写二进制数据 —— 掘金](https://juejin.im/post/5b93dadaf265da0a857a58a3)
-
-### 视频
-
-- :tv: [二进制、十进制、十六进制互相转化很难吗？ —— 百度视频](http://baishi.baidu.com/watch/7873060963471478456.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
 
 ## 32. 偏函数, 柯里化, Compose 和 Pipe
 
@@ -504,10 +254,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [JavaScript 轻量级函数式编程-第 4 章:组合函数 ——掘金](https://juejin.im/post/59a62f3d6fb9a0248363fd9d#comment)
 - :book: [JavaScript 函数式编程（二） —— @BuptStEve](https://github.com/BuptStEve/blog/issues/11)
 
-**[:arrow_up: 返回目录](#目录)**
-
----
-
 ## 33. 代码整洁之道
 
 ### 文章
@@ -518,8 +264,3 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [让你的代码更简短，更整洁，更易读的 ES6 小技巧 —— 掘金](https://juejin.im/post/5a7d71836fb9a063435ecf51)
 - :book: [Web 前端：11 个让你代码整洁的原则 —— 伯乐在线](http://blog.jobbole.com/23617/)
 
-<br>
-
-**[:arrow_up: 返回目录](#目录)**
-
----
