@@ -32,27 +32,19 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 1. **[调用堆栈](#1-调用堆栈)**
 5. **[== 与 ===, typeof 与 instanceof](#5--vs--typeof-vs-instanceof)**
 6. **[this, call, apply 和 bind](#6-this-call-apply-和-bind)**
-
 12. **[Promise](#12-promise)**
-13. **[立即执行函数, 模块化, 命名空间](#13-立即执行函数-模块化-命名空间)**
-14. **[递归](#14-递归)**
 15. **[算法](#15-算法)**
 16. **[数据结构](#16-数据结构)**
 17. **[消息队列和事件循环](#17-消息队列和事件循环)**
-18. **[setTimeout, setInterval 和 requestAnimationFrame](#18-settimeout-setinterval-和-requestanimationframe)**
 19. **[继承, 多态和代码复用](#19-继承-多态和代码复用)**
 20. **[按位操作符, 类数组对象和类型化数组](#20-按位操作符-类数组对象和类型化数组)**
 21. **[DOM 树和渲染过程](#21-dom-树和渲染过程)**
-22. **[new 与构造函数, instanceof 与实例](#22-new-与构造函数-instanceof-与实例)**
-23. **[原型继承与原型链](#23-原型继承与原型链)**
-24. **[Object.create 和 Object.assign](#24-objectcreate-和-objectassign)**
 25. **[工厂函数和类](#25-工厂函数和类)**
 26. **[设计模式](#26-设计模式)**
 27. **[Memoization](#27-memoization)**
 28. **[纯函数, 函数副作用和状态变化](#28-纯函数-函数副作用和状态变化)**
 29. **[耗性能操作和时间复杂度](#29-耗性能操作和时间复杂度)**
 30. **[JavaScript 引擎](#30-javascript-引擎)**
-31. **[二进制, 十进制, 十六进制, 科学记数法](#31-二进制-十六进制-十进制-科学记数法)**
 32. **[偏函数, 柯里化, Compose 和 Pipe](#32-偏函数-柯里化-compose-和-pipe)**
 33. **[代码整洁之道](#33-代码整洁之道)**
 
