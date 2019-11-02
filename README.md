@@ -30,7 +30,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ## 目录
 1. **[调用堆栈](#1-调用堆栈)**
-2. **[原始类型](#2-原始类型)**
 5. **[== 与 ===, typeof 与 instanceof](#5--vs--typeof-vs-instanceof)**
 6. **[this, call, apply 和 bind](#6-this-call-apply-和-bind)**
 7. **[函数作用域, 块级作用域和词法作用域](#7-函数作用域-块级作用域和词法作用域)**
@@ -69,24 +68,17 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ---
 
-## 2. 原始类型
-
-- :book: [JavaScript 标准参考教程(基本语法之数值) —— 阮一峰](https://wangdoc.com/javascript/types/number.html)
-
-
 ## 5. == vs ===, typeof vs instanceof
 
 ### 文章
+对于=== 和 Object.is  的不同，只要记住
+在 === 中 NaN !== NaN ,而 +0 === -0
+然而 Object.is中 Object.is(NaN, NaN) 为true ，而Object.is(+0, -0) 则为false
 
-- :book: [JavaScript 中的相等性判断 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-- :book: [js 中 == 和 === 的区别 —— 掘金](https://juejin.im/entry/584918612f301e005716add6)
+
 - :book: [== vs === in Javascript —— CSDN](https://blog.csdn.net/w97531/article/details/82255225)
 - :book: [深入理解 javascript 之 typeof 和 instanceof —— CSDN](https://blog.csdn.net/mevicky/article/details/50353881)
-- :book: [JavaScript 的 typeof 的用途 —— justjavac](http://justjavac.com/javascript/2012/12/23/what-is-javascripts-typeof-operator-used-for.html)
 - :book: [一张图看懂 Function 和 Object 的关系及简述 instanceof 运算符 —— 掘金](https://juejin.im/post/58358606570c35005e4142bd)
-- :book: [浅谈 instanceof 和 typeof 的实现原理 —— 掘金](https://juejin.im/post/5b0b9b9051882515773ae714)
-- :book: [js 中 typeof 与 instanceof 用法 —— 博客园](https://www.cnblogs.com/double405/p/5326311.html)
-
 **[:arrow_up: 返回目录](#目录)**
 
 ---
@@ -101,8 +93,6 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - :book: [this、apply、call、bind —— 掘金](https://juejin.im/post/59bfe84351882531b730bac2)
 - :book: [使用 call、apply 和 bind 解决 js 中烦人的 this，事件绑定时的 this 和传参问题 —— 博客园](https://www.cnblogs.com/tingyu-blog/p/6212392.html)
 - :book: [call、apply 和 bind 的原生实现 —— github](https://github.com/Abiel1024/blog/issues/16)
-- :book: [详解 JS 中的 this、apply、call、bind(经典面试题) —— 脚本之家](https://www.jb51.net/article/124024.htm)
-
 ### 视频
 
 - :tv: [JavaScript 关于 this 关键字解释 —— 爱奇艺](https://www.iqiyi.com/w_19rr1augsd.html)
