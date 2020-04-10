@@ -1,12 +1,7 @@
-在安装了git之后，个人总是忘记配置git config的命令，以此记录一下：
 ## 正常流程
 ###  配置用户名和邮箱的命令
-
 - git config --global user.name "yourgithubname"
-
 - git config --global user.email "youreamil@email.com"
-
-上面两句命令用于配置标示身份，让github协作开发者可以明白你是谁。
 
 git config –list 查看config配置
 ### 关联远程仓库
@@ -20,10 +15,9 @@ git config –list 查看config配置
 `git push -u origin master` 将工作区的文件推送到远程仓库
 -u参数不但会把本地的master分支内容推送到远程新的master分支，还会在它们之间建立联系，以后命令可以简化为git push
 
-
 ## 先拿到远程代码再进行开发的
 - git clone [url] 克隆远程库，默认是master分支 
-- git clone -b [branchname] [url] 克隆远程库的分支 
+- git clone -b [branchname] [url] 本地新建一个克隆远程库的分支 
 ## 直接本地开发的
 新建文件夹demo并打开，右键git init，之后直接看下方的本地关联远程仓库（注意文件夹名称要与远程仓库名一致，比如这里的远程仓库名应为git@github.com:ShiHunYongZhe/demo.git）
 #### 开始工作
@@ -35,13 +29,9 @@ git config –list 查看config配置
 - git push（此时无法提交，看下方的本地关联远程仓库）
 
 如果删错了工作区的文件， 
-- git checkout -- [filename]可以把文件在工作区的修改全部撤销。就是回到最近一次git commit或git add的状态。
+- git checkout -- [filename]可以把某个文件在工作区的修改撤销。
+- git checkout . 可以把全部未 add 的 文件在工作区的修改撤销。就是回到最近一次git commit或git add的状态。
 - git reset HEAD [filename]可以把暂存区的修改撤销掉，重新放回工作区。
-
-
-
-
-
 
 ##### 多人协作
 - 当从远程克隆仓库时，联系自动建立，origin默认为远程库。
