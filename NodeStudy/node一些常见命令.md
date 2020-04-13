@@ -27,3 +27,4 @@
 - npm config list //显示所有的config项
 - npm config edit //使用editor打开一个config文件
 - npm run script 运行某个script脚本
+- npm ls -g --depth=0  查看全局安装的模块
