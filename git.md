@@ -47,10 +47,10 @@ git remote -v展示更多远程库的信息。
 发生冲突，这时候就应该先 git pull把最新的提交从origin/dev抓下来，在本地合并，解决冲突(`git diff `查看文件更改内容)，再推送内容。
 
 - 如果出现git pull失败，说明本地分支dev没有和远程库分支dev建立联系，需要远程分支关联 git branch --set-upstream-to=origin/newbranch dev
-ps:git本地新建一个分支后，必须要做远程分支关联。如果没有关联，git会在下面的操作中提示你显示的添加关联。关联目的是如果在本地分支下操作： git pull, git push ，不需要指定在命令行指定远程的分支．推送到远程分支后，你只要没有显示指定，git pull的时候，就会提示你。
+- ps:git本地新建一个分支后，必须要做远程分支关联。如果没有关联，git会在下面的操作中提示你显示的添加关联。关联目的是如果在本地分支下操作： git pull, git push ，不需要指定在命令行指定远程的分支．推送到远程分支后，你只要没有显示指定，git pull的时候，就会提示你。
 
 - 之后切换为master分支`git checkout master`，然后`git merge dev`将dev分支合并到master分支，成功之后`git branch -d dev`删除分支dev
-
+- git reset --hard 远程主分支/远程分支名  将本地现分支重置为远程分支
 配置文件放哪了？每个仓库的Git配置文件都放在.gitconfig文件中：
 $ cat .gitconfig 
 ```
