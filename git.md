@@ -33,6 +33,10 @@ git config –list 查看config配置
 - git checkout . 可以把全部未 add 的 文件在工作区的修改撤销。就是回到最近一次git commit或git add的状态。
 - git reset HEAD [filename]可以把暂存区的修改撤销掉，重新放回工作区。
 
+回退分支
+- git reset --hard commit_id    可以把本地分支重置为commit_id时的分支
+- git push -f origin 分支名     将本地分支强制覆盖到远程分支
+
 ##### 多人协作
 - 当从远程克隆仓库时，联系自动建立，origin默认为远程库。
 git remote -v展示更多远程库的信息。
