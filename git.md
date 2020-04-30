@@ -73,7 +73,10 @@ git remote -v展示更多远程库的信息。
 
 （8）git stash clear ：删除所有缓存的stash
 ```
-
+- 删除 untracked files 
+- `git clean -f `
+- #连 untracked 的目录也一起删掉
+- `git clean -fd`
 
 ## 配置文件放哪了？每个仓库的Git配置文件都放在.gitconfig文件中：
 - $ cat .gitconfig 
