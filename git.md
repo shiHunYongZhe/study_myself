@@ -78,6 +78,25 @@ git remote -v展示更多远程库的信息。
 - #连 untracked 的目录也一起删掉
 - `git clean -fd`
 
+- 当想撤销中间某次提交时，强烈建议使用revert命令
+```
+正确的步骤：
+
+git revert commit_id
+//如果commit_id是merge节点的话,-m是指定具体哪个提交点其中
+//git revert commit_id -m 数字是针对，merge提交点的操作。
+//如果是普通的提交点，不需要这么麻烦。
+git revert commit_id -m 1
+//接着就是解决冲突
+git add -A
+git commit -m ".."
+git revert commit_id -m 2
+//接着就是解决冲突
+git add -A
+git commit -m ".."
+git push
+```
+
 ## 配置文件放哪了？每个仓库的Git配置文件都放在.gitconfig文件中：
 - $ cat .gitconfig 
 ```
