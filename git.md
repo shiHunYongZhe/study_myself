@@ -32,7 +32,7 @@ git config –list 查看config配置
 - git checkout -- [filename]可以把某个文件在工作区的修改撤销。
 - git checkout . 可以把全部未 add 的 文件在工作区的修改撤销。就是回到最近一次git commit或git add的状态。
 - git reset HEAD [filename]可以把暂存区的修改撤销掉，重新放回工作区。
-
+测试分支时有时成功拉到代码但不起作用，可以试试本地/测试重置分支，最不济可以重启服务器
 回退分支
 - git reset --hard commit_id    可以把本地分支重置为commit_id时的分支
 - git push -f origin 分支名     将本地分支强制覆盖到远程分支
@@ -46,7 +46,7 @@ git remote -v展示更多远程库的信息。
 - 创建和合并分支
 	创建分支 git checkout -b dev 
 	相当于 git branch dev 和 git checkout dev
-
+- 一般来说git pull/push 后接 origin 分支名，就不用每次都git branch --set-upstream-to=origin/newbranch dev关联远程分支，与其缩写git pull/push各有优劣
 - 工作完成git push，可能会产生冲突，比如已经有另外一个人向origin/dev分支推送了他的提交，而碰巧这个人也想对该文件作出修改并推送。 
 发生冲突，这时候就应该先 git pull把最新的提交从origin/dev抓下来，在本地合并，解决冲突(`git diff `查看文件更改内容)，再推送内容。
 
@@ -96,6 +96,7 @@ git add -A
 git commit -m ".."
 git push
 ```
+
 
 ## 配置文件放哪了？每个仓库的Git配置文件都放在.gitconfig文件中：
 - $ cat .gitconfig 
