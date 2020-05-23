@@ -20,3 +20,6 @@ http://blog.fens.me/series-nodejs/
 - 当前项目 按住shift，然后右键从当前目录进入命令行
   npm init 初始化之后一直回车（克隆别人的项目之后进入该项目则不需要此步骤）
   然后安装项目开发所需的依赖项npm install 
+  
+ npx 使用docusaurus快速搭建博客
+npx @docusaurus/init@next init hjz-blog classic
