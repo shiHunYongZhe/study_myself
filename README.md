@@ -12,11 +12,11 @@
 - 使用markdown做笔记 后缀为.md
 - 了解css预处理器scss、less、stulus,js常用库jquery、bootstrap
 - 不要盲目去学习算法
-- 后端首先学习node，次要php，java
+- 后端首先学习node，次要php
 ## 工作
 - 学习git工作流
 - 学习node的npm工具
-- 了解grunt gulp webpack 
+- 了解gulp webpack 
 CMD AMD Common.js的区别，主要使用webpack和Common.js
 - Vue React Angular, 一开始学习vue，学会了Vue，React也容易入门，Angular先不做考虑
 ## 性能测试工具
