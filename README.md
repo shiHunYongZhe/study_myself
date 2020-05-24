@@ -28,6 +28,10 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 
 ---
 
+## vue插件
+vue 富文本编辑器tingmce
+
+
 ## 目录
 1. **[调用堆栈](#1-调用堆栈)**
 5. **[== 与 ===, typeof 与 instanceof](#5--vs--typeof-vs-instanceof)**
