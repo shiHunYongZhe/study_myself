@@ -34,7 +34,6 @@ vue 富文本编辑器tingmce
 
 ## 目录
 1. **[调用堆栈](#1-调用堆栈)**
-5. **[== 与 ===, typeof 与 instanceof](#5--vs--typeof-vs-instanceof)**
 6. **[this, call, apply 和 bind](#6-this-call-apply-和-bind)**
 12. **[Promise](#12-promise)**
 15. **[算法](#15-算法)**
@@ -56,15 +55,6 @@ vue 富文本编辑器tingmce
 
 ## 1. 调用堆栈
 - :book: [这一次，彻底弄懂 JavaScript 执行机制 —— 掘金](https://juejin.im/post/59e85eebf265da430d571f89)
-## 5. == vs ===, typeof vs instanceof
-
-对于=== 和 Object.is  的不同，只要记住
-在 === 中 NaN !== NaN ,而 +0 === -0
-然而 Object.is中 Object.is(NaN, NaN) 为true ，而Object.is(+0, -0) 则为false
-
-- :book: [== vs === in Javascript —— CSDN](https://blog.csdn.net/w97531/article/details/82255225)
-- :book: [深入理解 javascript 之 typeof 和 instanceof —— CSDN](https://blog.csdn.net/mevicky/article/details/50353881)
-- :book: [一张图看懂 Function 和 Object 的关系及简述 instanceof 运算符 —— 掘金](https://juejin.im/post/58358606570c35005e4142bd)
 
 ## 6. this, call, apply 和 bind
 - :book: [学会 JS 的 this 这一篇就够了，根本不用记 —— 简书](https://www.jianshu.com/p/6b4333e78bf5)
