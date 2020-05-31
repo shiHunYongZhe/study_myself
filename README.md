@@ -7,31 +7,35 @@
 ## 软件使用
 - vscode 工程级编辑器
 - phpstudy本地服务器
-- Geogle 浏览器，调试专用（有一些好用的插件）
+- Chrome 浏览器，调试专用（有一些好用的插件）
 - Postman 测试json接口
+- Fiddler 查看网页打开时的所有信息和监听移动端事件
+- virtualBox 虚拟机软件，模拟线上服务器部署项目
+- snipaste 截图软件，做静态页面时需要
+- 微信开发者工具  专为小程序开发的软件
 ## 进阶
 - 使用markdown做笔记 后缀为.md
-- 了解css预处理器scss、less、stulus,js常用库jquery、bootstrap
-- 不要盲目去学习算法
-- 后端首先学习nginx配置，其次学习node，php，java不考虑
+- 熟练使用css预处理器scss、less、stulus, js常用库jquery、bootstrap
+- 后端首先学习nginx配置，其次学习node，php，不考虑java
+- 不要盲目去学习算法，数据结构，设计模式
 ## 工作
 - git工作流
 - node的npm工具
 - gulp webpack
 - CMD AMD Common.js的区别，主要使用webpack和Common.js
 - Vue React Angular, 一开始学习vue，学会了Vue，React也容易入门，Angular先不做考虑
-## 性能测试工具
-- 阿里云PTS
-- 百度APM
-- webpagetest
-- tools.pingdom.com
-- gemetrix
 
 ## 模拟线上环境
 1. 使用virtualBox之类的软件安装虚拟机，然后安装php，mysql,nginx，node等环境,测试部署项目
 2. 线上推荐使用[docker虚拟机](https://labs.play-with-docker.com/)，可方便下载和使用各种docker镜像（强烈推荐）
 ---
 
+## 性能测试工具
+- 阿里云PTS
+- 百度APM
+- webpagetest
+- tools.pingdom.com
+- gemetrix
 
 ## 目录
 1. **[调用堆栈](#1-调用堆栈)**

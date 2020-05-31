@@ -1,8 +1,0 @@
-Dom编程使用库
-jquery
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-图形库
-svg    gsap
-canvas 
-数据可视化  d3 echarts

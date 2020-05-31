@@ -21,7 +21,7 @@ git config –list 查看config配置
 ## 直接本地开发的
 新建文件夹demo并打开，右键git init，之后直接看下方的本地关联远程仓库（注意文件夹名称要与远程仓库名一致，比如这里的远程仓库名应为git@github.com:ShiHunYongZhe/demo.git）
 #### 开始工作
-- git add  把文件添加到缓存区（索引区），Git会自动为我们创建第一个分支master，以及指向master的第一个指针叫HEAD。
+- git add . 把文件添加到缓存区（索引区），Git会自动为我们创建第一个分支master，以及指向master的第一个指针叫HEAD。
 - git rm [filename]删除暂存区的文件
 - git status 查看状态
 - git commit -m “ss” 向工作区提交并且注释”ss” 
