@@ -27,8 +27,8 @@ CMD AMD Common.js的区别，主要使用webpack和Common.js
 - gemetrix
 
 ## 模拟线上环境
-1.使用virtualBox之类的软件安装虚拟机，然后安装php，mysql,nginx，node等环境,测试部署项目
-2.线上推荐使用![docker虚拟机](https://labs.play-with-docker.com/)，可方便下载和使用各种docker镜像（强烈推荐）
+1. 使用virtualBox之类的软件安装虚拟机，然后安装php，mysql,nginx，node等环境,测试部署项目
+2. 线上推荐使用[docker虚拟机](https://labs.play-with-docker.com/)，可方便下载和使用各种docker镜像（强烈推荐）
 ---
 
 ## vue插件
