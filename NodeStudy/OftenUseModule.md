@@ -15,6 +15,7 @@ Mongoose - 让 NodeJS 更容易操作 Mongodb 数据库； 附上一篇Mongoose 
 express/koa 封装的node框架,类似jq封装了js
 koa - 玩 Node 都知道 express，但使用 koa 的就少很多，门槛比 Ex 稍高 通过 generator 避免繁琐的回调函数嵌套，强烈推崇 官方的文章教程
 Mocha - Node 里最常用的测试框架； 它支持多种 Node 的 Assert libs； 同时支持异步和同步的测试，同时支持多种方式导出结果； 也支持直接在 browser 上跑 JS 代码测试。
+nodered   图形化编程工具，npm简单而强大的流程拖拽工具
 superagent | request  是个 http 方面的库，可以发起 get 或 post 请求。
 cheerio(https://github.com/cheeriojs/cheerio ) 大家可以理解成一个 Node.js 版的 jquery，用来从网页中以 css selector 取数据，使用方式跟 jquery 一样一样的。
 json-server 快速使用json格式的文件匹配浏览器路由，返回对应数据

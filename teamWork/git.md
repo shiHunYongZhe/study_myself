@@ -49,7 +49,7 @@ git remote -v展示更多远程库的信息。
 - 一般来说git pull/push 后接 origin 分支名，就不用每次都git branch --set-upstream-to=origin/newbranch dev关联远程分支，与其缩写git pull/push各有优劣
 - 工作完成git push，可能会产生冲突，比如已经有另外一个人向origin/dev分支推送了他的提交，而碰巧这个人也想对该文件作出修改并推送。 
 发生冲突，这时候就应该先 git pull把最新的提交从origin/dev抓下来，在本地合并，解决冲突(`git diff `查看文件更改内容)，再推送内容。
-
+- git pull后若数据库文件有修改，本地数据库也要做相应修改
 - 如果出现git pull失败，说明本地分支dev没有和远程库分支dev建立联系，需要远程分支关联 git branch --set-upstream-to=origin/newbranch dev
 - ps:git本地新建一个分支后，必须要做远程分支关联。如果没有关联，git会在下面的操作中提示你显示的添加关联。关联目的是如果在本地分支下操作： git pull, git push ，不需要指定在命令行指定远程的分支．推送到远程分支后，你只要没有显示指定，git pull的时候，就会提示你。
 
