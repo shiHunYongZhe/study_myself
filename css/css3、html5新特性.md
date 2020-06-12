@@ -5,6 +5,7 @@
 
 ```css
 	display:flex;  //弹性盒模型
+	display:grid;  //栅格模型相关属性
 	outline：1px solid #f00;  //外轮廓
 	outline-offset:2px  //外轮廓边距（可为负值, 当设置比元素还大的负值时可生成中心的 “+” 符号）
 	font-size-adjust:100%;  //字体改变时文字大小不变
