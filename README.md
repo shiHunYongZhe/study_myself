@@ -50,11 +50,9 @@
 25. **[工厂函数和类](#25-工厂函数和类)**
 26. **[设计模式](#26-设计模式)**
 27. **[Memoization](#27-memoization)**
-28. **[纯函数, 函数副作用和状态变化](#28-纯函数-函数副作用和状态变化)**
 29. **[耗性能操作和时间复杂度](#29-耗性能操作和时间复杂度)**
 30. **[JavaScript 引擎](#30-javascript-引擎)**
 32. **[偏函数, 柯里化, Compose 和 Pipe](#32-偏函数-柯里化-compose-和-pipe)**
-33. **[代码整洁之道](#33-代码整洁之道)**
 
 ---
 
@@ -158,15 +156,6 @@
 - :book: [如何提升 JavaScript 的递归效率 —— 51CTO](http://developer.51cto.com/art/201010/231513.htm)
 - :book: [JavaScript 高级技巧 Memoization —— SegmentFaut](https://segmentfault.com/a/1190000016703106)
 
-## 28. 纯函数, 函数副作用和状态变化
-
-- :book: [纯函数(Pure Function) —— React.js 小书](http://huziketang.mangojuice.top/books/react/lesson32)
-- :book: [JavaScript Functional Programming：纯函数 —— 宁皓网](https://ninghao.net/blog/4634)
-- :book: [js 函数的副作用分析 —— 脚本之家](https://www.jb51.net/article/28079.htm)
-- :book: [如何使用纯函数式 JavaScript 处理脏副作用 —— 掘金](https://juejin.im/post/5b82bdb351882542e241ed32?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com)
-- :book: [原生 JavaScript 实现 state 状态管理系统 —— 博客园](http://www.cnblogs.com/zhangycun/p/9403335.html)
-- :book: [JavaScript 函数式编程 —— @BuptStEve](https://github.com/BuptStEve/blog/issues/10)
-
 ## 29. 耗性能操作和时间复杂度
 
 - :book: [时间复杂度 O(log n) 意味着什么？ —— 掘金](https://juejin.im/entry/593f56528d6d810058a355f4)
@@ -197,12 +186,4 @@
 - :book: [JavaScript 函数式编程之函数组合函数 compose 和 pipe 的实现 —— SegmentFault](https://segmentfault.com/a/1190000015102804)
 - :book: [JavaScript 轻量级函数式编程-第 4 章:组合函数 ——掘金](https://juejin.im/post/59a62f3d6fb9a0248363fd9d#comment)
 - :book: [JavaScript 函数式编程（二） —— @BuptStEve](https://github.com/BuptStEve/blog/issues/11)
-
-## 33. 代码整洁之道
-
-- :book: [[译] JavaScript 代码整洁之道 —— 边城](https://www.zcfy.cc/article/clean-code-javascript-readme-md-at-master-ryanmcdermott-clean-code-javascript-github-2273.html)
-- :book: [Javascript 编程风格 —— 阮一峰](http://www.ruanyifeng.com/blog/2012/04/javascript_programming_style.html)
-- :book: [重构 - 代码整洁之道 —— 掘金](https://juejin.im/post/5a5b2a5c6fb9a01cbc6e59f9)
-- :book: [让你的代码更简短，更整洁，更易读的 ES6 小技巧 —— 掘金](https://juejin.im/post/5a7d71836fb9a063435ecf51)
-- :book: [Web 前端：11 个让你代码整洁的原则 —— 伯乐在线](http://blog.jobbole.com/23617/)
 
