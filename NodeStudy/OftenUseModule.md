@@ -37,6 +37,7 @@ shelljs - 写 Node 时难免需要用 shell 去操作些神马 shelljs 是基于
 hashids - 看名称就懂，给 userid 加解密用的
 node-pool - 让 Node 有连接池的概念
 colors - 花俏的小工具 让打印console.log时有更好的展示样式
+i5ting_toc - Markdown转成带目录的Html
 ```
 
 ```
