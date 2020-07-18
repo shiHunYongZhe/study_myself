@@ -38,3 +38,11 @@ hashids - 看名称就懂，给 userid 加解密用的
 node-pool - 让 Node 有连接池的概念
 colors - 花俏的小工具 让打印console.log时有更好的展示样式
 ```
+
+```
+对比	Puppeteer	TestCafe	Selenium
+语言	Javascript	Javascript/TypeScript	多种 binding 语言
+兼容浏览器	仅Chrome系列	多种浏览器（包括 IE）	多种浏览器（包括 IE）
+测试框架	不面向测试，无框架	本身就是测试框架	无框架
+工作原理	通过WebSocket 协议与 chrome 的通信	通过设置代理，将用户的行为传递给被测页面	通过 wire protocol 和 浏览器 通信
+```
