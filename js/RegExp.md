@@ -5,8 +5,6 @@
 /表达式/g  带这个标志表示替换将针对行中每个匹配的串进行，否则则只替换行中第一个匹配串。如：we.fdffddfwe.加上/g后，则2个we都会出来；
 /表达式/m  多行模式 multi
 /表达式/s  与/m相对，单行模式匹配。
-/表达式/e  可执行模式，此为PHP专有参数，例如preg_replace函数。
-/表达式/x  忽略空白模式。
 ```
 正则匹配中文汉字根据页面编码不同而略有区别 
 ```
@@ -45,4 +43,32 @@ $$：指代美元符号$。
 
 'abc'.replace('b', '[$`-$&-$\']')
 // "a[a-b-c]c"
+```
+
+groups的部分语法
+xy(\d)   匹配形如 xy2, 数字会被捕获到groups中
+xy(?:\d)   匹配形如 xy, xy后需接数字， 数字不会被捕获到groups中，外层分组能捕获到数字
+xy(?=\d)   匹配形如 x2y, 数字会被捕获到groups中,外层分组不能捕获到数字
+```
+?: 和 ?= 的区别
+var reg, str = "kid is a doubi";
+reg = /(kid is a (?:doubi))/
+reg.test(str)
+RegExp.$1 // kid is a doubi
+reg = /(kid is a (?=doubi))/
+reg.test(str)
+RegExp.$1 // kis is a
+```
+xy(?!\d)   匹配形如 xy,xy后不能接数字， 数字不会被捕获到groups中
+
+
+
+
+js正则部分语法
+```
+var result0 = /^[\u4e00-\u9fa5]$/.exec("所");
+var result1 = "所".match(/^[\u4e00-\u9fa5]$/);
+
+result0 和result1的结果都是一样的
+['所', index: 0, input: '所', groups: undefined]
 ```
