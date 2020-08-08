@@ -60,7 +60,8 @@ reg.test(str)
 RegExp.$1 // kis is a
 ```
 xy(?!\d)   匹配形如 xy,xy后不能接数字， 数字不会被捕获到groups中
-
+(?<=\d)xy   匹配形如 xy,xy前不能接数字， 数字不会被捕获到groups中
+(?<!=\d)xy   匹配形如 xy,xy前不能接数字， 数字不会被捕获到groups中
 
 
 
