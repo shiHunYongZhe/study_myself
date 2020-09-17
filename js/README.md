@@ -1,14 +1,25 @@
 ## js常用库
 - jquery  最常用的dom操作库，cdn地址可使用<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+- bootstrap工具库如datapicker、datarangepicker
+- animate.js h5动画库
 - moment.js  JavaScript 日期处理类库
 - three.js - JavaScript 3D 库。超多的 examples 等着你去发现，你只需要关注内存和风扇就行了
-- ECharts - 好用，最关键的是支持的图表展示非常之多，强烈推荐
+- ECharts - 好用，最关键的是支持的图表展示非常之多，强烈推荐，highchart则功能少些，但也可用
 - gsap     svg图形操作库
 - Swiper - 强大的 Slider 库 其实这类效果库非常多，但文档能那么专业的就很少鸟
 - fullPage - 非常好用的全屏滑动库，看 Demo 就明白
 - excellentexport - 纯前端的 Excel 导出，非常之方便
-- Cropper - 国人开发的图片裁剪库
 - lodash - JS 工具库 Underscore.js的一个 fork 发展而来，函数式编程
+### 即学即用的库
+- cookie.js  cookie操作库
+- html2canvas、canvas2image、 canvas-to-blob  canvas操作相关类库，
+- pringThis jquery的打印库
+- qrcode.js 文本资源转为二维码库
+- cropper.js   国人开发的图片裁剪库
+- filesaver.js  保存文件库（核心把其他资源保存为blob,不支持new Blob的浏览器无法使用）
+- layer.js  弹出框js库
+- crypto   -- 前端加密库，保存密码时本地存储可使用（提交表单仍使用原密码），比base64加密性高
+- select2.js  -好看的多选框
 ## 一些语法
 js中尽可能不要使用eval、==（使用全等===代替）、with语法，一大堆问题
 ```
