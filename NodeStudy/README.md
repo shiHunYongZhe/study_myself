@@ -2,7 +2,6 @@
 http://blog.fens.me/series-nodejs/
 - [- 基本上每一篇都看过，强烈推荐](http://blog.fens.me/series-nodejs/)
 - [node包教不教会](https://github.com/alsotang/node-lessons)
-- [如果学习 NodeJS，那么流一定是需要掌握的概念](stream-handbook)
 ## nodejs安装
 - node.js![](http://nodejs.cn/)官网下载
 - 程序正常安装即可
