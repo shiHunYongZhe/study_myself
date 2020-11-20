@@ -16,17 +16,6 @@
 ## Css Peek
 > 在你的html中鼠标指向某个class或者id名称按住Ctrl键+鼠标左键可以直接定位到该名称的CSS的位置
 
-## Turbo Console Log
-```
-ctrl + alt + l 选中变量之后，使用这个快捷键生成 console.log
-
-alt + shift + c 注释所有 console.log
-
-alt + shift + u 启用所有 console.log
-
-alt + shift + d 删除所有 console.log
-```
-
 ## vscode-json
 > 在json文件中右鍵使用format Document或format Document with即可美化json
 
@@ -36,7 +25,6 @@ alt + shift + d 删除所有 console.log
 - 下载时同样输入Sync，有个download
 
 ## PolaCode 生成漂亮的代码截图
-## CodeIf，CodeIf 是一个用来给变量命名的网站，
 
 ## css Bomb 梳理 CSS 属性顺序, 具体使用可百度
 

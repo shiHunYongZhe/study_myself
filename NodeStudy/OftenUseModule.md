@@ -12,8 +12,7 @@ http-server 快速建立本地服务器
     hs -o -p 8080   这个命令行可在当前文件夹搭建服务器，一般在vue生成的dist目录下使用，查看index.html
 npx 使用docusaurus快速搭建本地博客
 Mongoose - 让 NodeJS 更容易操作 Mongodb 数据库
-express/koa 封装的node框架,类似jq封装了js
-koa - 玩 Node 都知道 express，但使用 koa 的就少很多，门槛比 Ex 稍高 通过 generator 避免繁琐的回调函数嵌套，强烈推崇 官方的文章教程
+express-generator 封装的node框架,类似jq封装了js
 Mocha - Node 里最常用的测试框架； 它支持多种 Node 的 Assert libs； 同时支持异步和同步的测试，同时支持多种方式导出结果； 也支持直接在 browser 上跑 JS 代码测试。
 nodered   图形化编程工具，npm简单而强大的流程拖拽工具
 superagent | request  是个 http 方面的库，可以发起 get 或 post 请求。
@@ -29,7 +28,6 @@ node-inspector - Node 调试工具，使用起来跟 Chrome 的 JS 调试器很�
 winston - Node 服务最流行的日志库之一
 co - 用 generator 写法让异步代码同步
 PhantomJS - 一般用来做抓取截图和无界面测试 也可以用来操作 DOM 和网络监测，很好玩的库 Quick Start
-koa-validate - koa 的校验库 可以非常方便的对 queryString 或 postBody 的信息进行验证
 line-reader - 基于steam的按行读文件，偶处理日志时用哒 要不实现一个按行读文件，又得 steam、 又得 chunk，还是比较麻烦的
 everyauth - OAuth 的集成解决方案
 shelljs - 写 Node 时难免需要用 shell 去操作些神马 shelljs 是基于 Node 的 shell 工具，API 及其简单
