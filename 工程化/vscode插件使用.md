@@ -3,9 +3,11 @@
 - 在>号后面输入插件名字即可调用插件
 
 ## Quokka 是一个调试工具，可以为您正在编写的代码提供实时反馈。它能够预览变量的函数和计算值结果。
+> f1后输入quokka,即可新建实时编译的js文件（文件保存后就没有代码就没有实时反馈效果）
 
 ## vscode-faker
 > 可以随机生成姓名、地址、图像、电话号码，或者经典的乱数假文段落，并且每个类别还包含了各种子类别，你可以根据自身的需求来使用这些数据。
+f1后输入faker,即可选择指定类型的随机字段
 
 ## TODO Highlight--
 > 这个插件能够在你的代码中标记出所有的 TODO 注释，以便更容易追踪任何未完成的业务。
@@ -19,12 +21,19 @@
 ## vscode-json
 > 在json文件中右鍵使用format Document或format Document with即可美化json
 
+# Partial Diff
+代码比较差异插件，选中代码1，右键Select Text for Compare
+选中代码2，右键Compare Text with Previous Selection
+
+或在剪切板已有内容的情况下直接选中代码1，右键Compare Text with Clipboard
+
 ## Settings Sync，
 > 在不同电脑间同步你的插件，具体流程百度
 - f1后输入Sync，点击upload，后登录到GitHub，回到vscode继续upload，成功后调试版OUTPUT有信息显示
 - 下载时同样输入Sync，有个download
 
 ## PolaCode 生成漂亮的代码截图
+> f1后输入po,选择该插件，之后选中某段代码即可在右侧栏实时生成截图，可保存该截图
 
 ## css Bomb 梳理 CSS 属性顺序, 具体使用可百度
 
