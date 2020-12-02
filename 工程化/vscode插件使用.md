@@ -30,3 +30,13 @@
 
 ## REST Client 快速浏览接口数据
 > 新建一个.http文件 输入GET api地址即可出现Send Request，点击后看到效果
+
+# vscode-fileheader
+> 打开某个文件，按住curl + alt + i 即可加入文件头
+
+# vscode-json
+> curl + alt + b 即可美化json文件
+> curl + alt + u 即可压缩json文件
+> curl + alt + v 是否有效的json文件
+> curl + alt + ' 即可Escape json文件  对双引号加入反斜杠
+> curl + alt + : 即可unescape json文件 对取消双引号前的反斜杠
