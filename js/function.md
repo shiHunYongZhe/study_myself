@@ -1,109 +1,4 @@
 ## 常用函数
-## 封装ajax
-```
-function json2url(json) {
-  var arr = [];
-  for (var name in json) {
-    arr.push(name + '=' + json[name]);
-  }
-  return arr.join('&');
-}
-
-function ajax(json) {
-  json = json || {};
-  if (!json.url) {
-    return;
-  }
-  json.data = json.data || {};
-  json.type = json.type || {};
-
-  var timer = null;
-
-  if (window.XMLHttpRequest) {
-    var oAjax = new XMLHttpRequest();
-  } else {
-    var oAjax = new ActiveXObject('Microsoft.XMLHTTP');
-  }
-
-  switch (json.type) {
-    case 'get':
-      oAjax.open('GET', json.url + '?' + json2url(json.data), true);
-      oAjax.send();
-      break;
-    case 'post':
-      oAjax.open('POST', json.url, true);
-      oAjax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      oAjax.send(json2url(json.data));
-      break;
-  }
-
-  oAjax.onreadystatechange = function () {
-    if (oAjax.readyState == 4) {
-      clearTimeout(timer);
-      if (oAjax.status >= 200 && oAjax.status < 300 || oAjax.status == 304) {
-        json.success && json.success(oAjax.responseText);
-      } else {
-        json.error && json.error(oAjax.status);
-      }
-    }
-  }
-}
-
-window.onload = function () {
-  var oTxtUser = document.getElementById('user');
-  var oTxtPass = document.getElementById('pass');
-  var oBtnReg = document.getElementById('reg_btn');
-  var oBtnLogin = document.getElementById('login_btn');
-
-  oBtnLogin.onclick = function () {
-    ajax({
-      url: '/user',
-      data: {
-        act: 'login',
-        user: oTxtUser.value,
-        pass: oTxtPass.value
-      },
-      type: 'get',
-      success: function (str) {
-        var json = eval('(' + str + ')');
-
-        if (json.ok) {
-          alert('登录成功');
-        } else {
-          alert('登录失败：' + json.msg);
-        }
-      },
-      error: function () {
-        alert('通信错误');
-      }
-    });
-  };
-
-  oBtnReg.onclick = function () {
-    ajax({
-      url: '/user',
-      data: {
-        act: 'reg',
-        user: oTxtUser.value,
-        pass: oTxtPass.value
-      },
-      type: 'get',
-      success: function (str) {
-        var json = eval('(' + str + ')');
-
-        if (json.ok) {
-          alert('注册成功');
-        } else {
-          alert('注册失败：' + json.msg);
-        }
-      },
-      error: function () {
-        alert('通信错误');
-      }
-    });
-  };
-};
-```
 ## 缓存记忆
 ```
 var fibonacci = (function(){
@@ -121,15 +16,6 @@ var fibonacci = (function(){
 const yesNo = (val, def = false)=>/^(y|yes)$/i.test(val) ? true:/^(no|n)$/i.test(val) ? false:def;
 const validateNumber = n=>!isNaN(parseFloat(n))&&isFinite(n)&&Number(n) ==n;
 const toDecimalMark = num =>num.toLocaleString('en-US');
-```
-## 测试时间
-```
-const timeTaken = callback => {
-	console.time('timeTaken');
-	const r = callback();
-	console.timeEnd('timeTaken');
-	return r;
-}
 ```
 ## 随机颜色
 ```
@@ -184,25 +70,3 @@ function requireJs(url, onload, onerror) {
 	}
 }
 ``` 
-
-## 获取URL的字符串  
-```
-var backurl = unescape(geturlparameter("backurl"));
-  function geturlparameter(paramname) {
-      var returnval = "";
-      var paramurl = window.location.search;
-      //处理长度
-      if (paramurl.length > 0) {
-          paramurl = paramurl.substring(1, paramurl.length);
-          var paramurlarray = paramurl.split("&");
-          for (var i = 0; i < paramurlarray.length; i++) {
-              var temp = paramurlarray[i].split("=");
-              if (temp[0] == paramname) {
-                  returnval = temp[1];
-                  break;
-              }
-          }
-      }
-      return decodeURI(returnval);
-  }
-  ```
