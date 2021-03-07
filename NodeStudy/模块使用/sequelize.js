@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+// 有时候可在目录下依次使用以下命令生成私钥和公钥，然后加密使用私钥，解密使用公钥
+// openssl
+// > genrsa -out private.key 1024
+// > rsa -in private.key -pubout -out public.key
 process.env.SECRET_KEY = "secret";
 app.use(express.json())
 app.get("/",(req,res) => {
@@ -21,6 +25,13 @@ const sequelize = new Sequelize("node_sql","root","hongwei",{
         idle:10000
     }
 })
+
+sequelize.authenticate().then(() => {
+    console.log("连接数据库成功~");
+  }).catch(err => {
+    console.log("连接数据库失败~", err);
+  });
+  
 // new Sequelize(database, [username=null], [password=null], [options={}])
 
 // const sequelize = new Sequelize('mysql://root:hongwei@localhost:3306/node_sql', {})
@@ -97,7 +108,7 @@ app.post("/login",(req,res) => {
                   expiresIn:1440
               })
               //解密token
-            //   var decoded = jwt.decode(token);
+            //   var decoded = jwt.decode(token,process.env.SECRET_KEY);
             // console.log(decoded);
               res.json({msg:"login success",token})
           }else {

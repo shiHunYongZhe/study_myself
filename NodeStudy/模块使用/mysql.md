@@ -4,22 +4,22 @@
 （1）安装 mysql 包：
 
 ```bash
-$ npm install mysql
+$ npm install mysql2
 ```
 
 （2）引入 mysql 包：
 
 ```js
-const mysql = require("mysql");
+const mysql = require("mysql2");
 ```
 
 （3）建立连接：
 
 ```js
-let mysql = require("mysql");
+let mysql = require("mysql2");
 let options = {
   host: "localhost",
-  //port:"3306", //可选，默认3306
+  port:"3306", //可选，默认3306
   user: "root",
   password: 'xxx', // 这里改成你自己的数据库连接密码
   database: "qiangu_database",
@@ -40,15 +40,6 @@ connection.connect((err) => {
 ```
 
 正常来说，运行程序后，应该会提示`数据库连接成功`。
-
-如果在运行时提示错误`Client does not support authentication protocol requested by server`，解决办法如下：(在终端进入 sql 之后，输入如下命令)
-
-```sql
-# 注意，这里的 'root' 请填你的user账号， 'localhost' 请填 你的 host， 'password' 请填你的密码
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-
-# 然后执行如下命令
-flush privileges;
 ```
 
 ## Node.js 增删改查 MySQL
@@ -65,7 +56,7 @@ flush privileges;
 ```js
 
 // 1、查询表
-let strSql1 = 'select * from qiangu_student_table';
+let strSql1 = 'select * from qiangu_student_table where price > 6000 and score > 7';
 connection.query(strSql1, (err, result, fields) => {
     if (err) {
         // 表查询失败
@@ -77,21 +68,15 @@ connection.query(strSql1, (err, result, fields) => {
     }
 })
 
+// 另外一种方式
+const statement = `
+  SELECT * FROM qiangu_student_table WHERE price > ? AND score > ?;
+`
+connection.execute(statement, [6000, 7], (err, results) => {
+  console.log(results);
+});
+
 ```
-
-打印结果如下：
-
-```bash
-qiangu_student_table 表查询结果：
-[{"id":1,"name":"千古壹号","age":28},{"id":2,"name":"许嵩","age":34},{"id":3,"name":"邓紫棋","age":28}]
-
-fields:[
-    {"catalog":"def","db":"qiangu_database","table":"qiangu_student_table","orgTable":"qiangu_student_table","name":"id","orgName":"id","charsetNr":63,"length":11,"type":3,"flags":0,"decimals":0,"zeroFill":false,"protocol41":true},
-    {"catalog":"def","db":"qiangu_database","table":"qiangu_student_table","orgTable":"qiangu_student_table","name":"name","orgName":"name","charsetNr":33,"length":765,"type":253,"flags":0,"decimals":0,"zeroFill":false,"protocol41":true},
-    {"catalog":"def","db":"qiangu_database","table":"qiangu_student_table","orgTable":"qiangu_student_table","name":"age","orgName":"age","charsetNr":63,"length":11,"type":3,"flags":0,"decimals":0,"zeroFill":false,"protocol41":true}
-]
-```
-
 ### 删除表
 
 ```js
@@ -106,22 +91,6 @@ connection.query(strSql2, (err, result) => {
         console.log('表删除成功：' + result);
     }
 });
-```
-
-打印结果：
-
-```bash
-表删除成功：
-OkPacket {
-    fieldCount: 0,
-    affectedRows: 0,
-    insertId: 0,
-    serverStatus: 2,
-    warningCount: 0,
-    message: '',
-    protocol41: true,
-    changedRows: 0
-}
 ```
 
 ### 删除数据库
@@ -148,20 +117,7 @@ connection.query(strSql4, (err, result) => {
 
 });
 
-
 ```
-
-打印结果：
-
-```bash
-数据库连接成功
-新建数据库成功：{
-    "fieldCount":0,"affectedRows":1,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0
-}
-
-```
-
-
 
 ### 3、新建表
 
@@ -197,17 +153,6 @@ connection.query(strSql5, (err, result) => {
 
 ```
 
-打印结果：
-
-```bash
-数据库连接成功
-qianguyihao 新建表成功：
-{
-    "fieldCount":0,"affectedRows":0,"insertId":0,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0
-}
-```
-
-
 ### 在指定的表中插入数据
 
 在指定的表中插入数据：
@@ -226,15 +171,6 @@ connection.query(strSql6, (err, result) => {
     }
 });
 
-```
-
-打印结果：
-
-```bash
-qianguyihao 在指定的表中插入数据成功：
-{
-    "fieldCount":0,"affectedRows":1,"insertId":1,"serverStatus":2,"warningCount":0,"message":"","protocol41":true,"changedRows":0
-}
 ```
 
 如果插入的数据是变量（比如是用户提交上来的数据），那么，sql 语句可以这样写：

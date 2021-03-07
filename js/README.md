@@ -1,6 +1,5 @@
 ## js常用库
 - jquery  最常用的dom操作库，cdn地址可使用<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-- bootstrap工具库如datapicker、datarangepicker
 - animate.js h5动画库
 - moment.js  JavaScript 日期处理类库(可用day.js 替代)
 - three.js - JavaScript 3D 库。超多的 examples 等着你去发现，你只需要关注内存和风扇就行了
