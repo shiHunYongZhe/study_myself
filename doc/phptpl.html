@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <ul class="dropdown-menu dropdown-menu-left">
+    <div class="scrollContainer">
+        <php>
+            if(is_null($filterOrderStatus)) {
+                echo '<li class="active" data-value=""><a href="javascript:void(0);">所有状态</a></li>';
+                $filterOrderStatusName = '所有状态';
+                foreach($orderStatus as $key => $status){
+                     echo '<li data-value="'.$key.'"><a href="javascript:void(0);">'.$status.'</a></li>';
+                }
+            } else {
+                echo '<li data-value=""><a href="javascript:void(0);">所有状态</a></li>';
+                foreach($orderStatus as $key => $status){
+                    if ($key == $filterOrderStatus) {
+                        $filterOrderStatusName = $status;
+                        echo '<li class="active" data-value="'.$key.'"><a href="javascript:void(0);">'.$status.'</a></li>';
+                    } else {
+                        echo '<li data-value="'.$key.'"><a href="javascript:void(0);">'.$status.'</a></li>';
+                    }
+                }
+            }
+        </php>
+    </div>
+</ul>
+
+<table>
+    <volist name="orders" id="vo">
+      <tr>
+        <td>{vo.id}</td>
+        <td>{vo.price}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </volist>
+  </table>
+
+  <foreach name="agencyInfos" item="vo">
+    <option value="{$vo['id']}">{vo['name']}</option>
+  </foreach>
+
+  <if condition="$hasList eq false">
+    <div class="noList">无数据</div>
+  <else />
+    <volist name="hasListArr" id="cost">
+        <if condition="$i eq 1">
+            <div class="list active" data-cost="{$cost.id}">{$cost.name}|{$cost.price}</div>
+            <else/>
+            <div class="list" data-cost="{$cost.id}">{$cost.name}|{$cost.price}</div>
+        </if>
+    </volist>
+  </if>
+
+    <if condition="($hotelRole neq 1) and ($withdrawAuthority eq 1)">
+    1111
+    </if>
+
+  <div class="btn-group" id="tabSwitchGroup">
+    <notempty name="currentHotel">
+        <a href="/pushNews.html?hotel={$currentHotel}" class="btn btn-raised [doc-side-news]">订单消息</a>
+        <a href="/pushWarn.html" class="btn btn-raised [doc-side-warn]">提醒事项</a>
+    </notempty>    
+</div>
+
+
+  <switch name="Think.LANG_SET">
+    <case value="en_us">English</case>
+    <case value="ja_jp">日本语</case>
+    <case value="zh_tw">繁体</case>
+    <default/>简体
+  </switch>
+  <img id="imgcode" class="col-xs-5 input-btn-group-btn" onclick="javascript:refreshVcode();" src="{:U('Home/Public/createpic');}">
+
+  <p>{:empty($customerTotal)?0:$customerTotal;}个客户</p>
+  <div id="doc" data-today="{:date('Y-m-d')}" data-end="{:date('Y-m-d',strtotime('+1 month'))}" class="container-above-md"></div>
+
+  <div class="col-xs-8" id="datePicker" data-start="{:date('Y-m-d', $startDay)}">
+    <div class="day text-sm"><span class="start">{:date('m/d', $startDay);}</span>~<span class="end">{:date('m/d', $endDay);}</span></div>
+    <div class="year text-sm">{:date('Y', $startDay);}</div>
+    <input id="datePickerInput" value="{:date('Y-m-d', $startDay);}" />
+  </div>
+
+  <switch name="dateStatus">
+    <case value="order">
+        <assign name="filterDateStatusName" value="录入日期" />
+        <li class='<eq name="dateStatus" value="order">active</eq>' data-value="order"><a href="javascript:void(0);">录入日期</a></li>
+        <li class='<eq name="dateStatus" value="checkin">active</eq>' data-value="checkin"><a href="javascript:void(0);">入住日期</a></li>
+        <li class='<eq name="dateStatus" value="checkout">active</eq>' data-value="checkout"><a href="javascript:void(0);">退房日期</a></li>
+    </case>
+    <case value="checkin">
+        <assign name="filterDateStatusName" value="入住日期" />
+        <li class='<eq name="dateStatus" value="order">active</eq>' data-value="order"><a href="javascript:void(0);">录入日期</a></li>
+        <li class='<eq name="dateStatus" value="checkin">active</eq>' data-value="checkin"><a href="javascript:void(0);">入住日期</a></li>
+        <li class='<eq name="dateStatus" value="checkout">active</eq>' data-value="checkout"><a href="javascript:void(0);">退房日期</a></li>
+    </case>
+    <default />
+        <assign name="filterDateStatusName" value="录入日期" />
+        <li class='<eq name="dateStatus" value="order">active</eq>' data-value="order"><a href="javascript:void(0);">录入日期</a></li>
+        <li class='<eq name="dateStatus" value="checkin">active</eq>' data-value="checkin"><a href="javascript:void(0);">入住日期</a></li>
+        <li class='<eq name="dateStatus" value="checkout">active</eq>' data-value="checkout"><a href="javascript:void(0);">退房日期</a></li>
+  </switch>
+
+    <!--删除房间二次确认弹窗-->
+    <div class="modal fade" data-backdrop="static" id="delRoomModal">
+      <div class="modal-dialog fixed-modal w-400">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title">确认删除</h4>
+              </div>
+              <div class="modal-body">
+                  确认删除该房间？
+              </div>
+              <div class="modal-footer">
+                  <div class="form-horizontal form-sm">
+                      <div class="form-group">
+                          <div class="col-xs-10 col-xs-offset-2">
+                              <span class="red"></span>
+                              <button type="button" class="btn-primary btn-raised ulite-js-btn ulite-js-ripple-effect submitBtn" id="delRoomBtn">确定</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+      <!--取消-->
+      <div class="modal fade" data-backdrop="static" id="cancelApplyModel">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close btn ulite-js-btn ulite-js-ripple-effect" data-dismiss="modal"
+                            aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">开票信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: 14px;">是否取消该发票申请？</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-horizontal form-sm">
+                        <div class="form-group">
+                            <div class="col-xs-10 col-xs-offset-2">
+                                <div class="help-block inline-help-block inline-help-block-right"></div>
+                                <button type="button" class="btn btn-default btn-raised ulite-js-btn ulite-js-ripple-effect" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn-primary btn-raised ulite-js-btn ulite-js-ripple-effect"
+                                        id="requestCancelInvoice">确定
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <!-- $(document).on("click",".delRoomClick",function(e){
+    $('#delRoom').modal('show');
+  });
+//模态框关闭监听
+$('#delRoom').on('hide.bs.modal', function(event) {
+    //清除持卡人
+    $('#search_text3').val('');
+    //隐藏详情
+    $('.detail').addClass('hidden');
+});
+-->
+
+
+
+  <!-- js和php变量混用 -->
+  <script type="text/javascript">
+    var isClientAvailable = {$isClientAvailable?'true':'false'};
+    var userId = {$userId};
+    var communityId = {$communityId};
+  </script>
+
+
+
+<!-- html模板 -->
+  <script type="text/html" id="shopListTemplate">
+    <div class="list flex-direction-row">
+        <div class="list_shop flex-1">
+            <div class="no"></div>
+            <div class="picture"></div>
+            <div class="shop_details">
+                <div class="name"></div>
+                <div class="type"></div>
+                <div class="record">
+                    <span>收藏：<span class="collect"></span></span>
+                    <span>销量：<span class="sales"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="list_sort hidden hasTop">取消置顶</div>
+        <div class="list_sort hidden noHasTop">置顶</div>
+        <div class="list_set"><span class='hasrelated'>解除关联</span></div>
+    </div>   
+</script> 
+
+<script>
+// html模板放置在script中，ajax接口请求后赋值填充
+var recommendHTML = '';
+$.each(info, function(key, value) {
+    var shopListTemplateHTML = $($('#shopListTemplate').clone().html());
+    shopListTemplateHTML.attr({'data-skuid':value.sku_id,'data-price':value.price,'data-grid':value.grid_id});
+    shopListTemplateHTML.attr('data-recommend',value.recommend);
+    shopListTemplateHTML.find('.name').text(value.name);
+    shopListTemplateHTML.find('.modelNumber').text(value.modelnumber);
+    shopListTemplateHTML.find('.shopPirce').text(parseFloat(value.price).toFixed(2));
+    shopListTemplateHTML.find('.shopSales').text(value.sales); 
+    shopListTemplateHTML.find('.shop-cover').css({"background-image":"url("+value.cover+")","background-size":"cover","background-position":"center"});
+    
+    recommendHTML += shopListTemplateHTML.prop('outerHTML');
+});
+$('#shopContent').html(recommendHTML); 
+</script>
+
+</body>
+</html>
+
+
+
+<!-- view/zh_cn/PublicPage/about.html -->
+<extend name="zh_cn:Public:basev3" />
+<block name="title">
+    <title>锁掌柜 - 开放接口</title>
+</block>
+<block name="extendHead">
+    <link rel="stylesheet" type="text/css" href="/Public/dist/Home/common_public.css?rev=e641671e61836d7d5b436eff81c2e46e">
+</block>
+<block name="document">
+    <div id="doc">
+        <!--导航栏-->
+        <include file="zh_cn:Public:Include_navbar_public" navbar-open="active" />
+        <!--头图-->
+        <div id="headImg" data-original="__PUBLIC__/dist/Home/OpenCenter/image/banner.png?rev=1"></div>
+        <!--二级导航栏-->
+        <include file="zh_cn:Public:Include_openCenter_menu" item_1="active" />
+
+        <div class="row md-width">
+            <!--侧方导航栏-->
+            <include file="zh_cn:Public:Include_introduce_menu" item_1="active" />
+
+            <div class="col-xs-8" id="document-right-content">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="/Public/dist/Home/OpenCenter/image/element_1.png" />
+                        </td>
+                        <td>
+                            <p>
+                                用于第三方应用在线获取二维码房卡/钥匙，适合酒店，公寓，办公等多个场景<br/>接口调用简单，提供多种语言实例
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <include file="zh_cn:Public:Include_footer_public" />
+    </div>
+    <!--end of doc-->
+</block>
+<block name="extendFootJs">
+    <script type="text/javascript" src="/Public/dist/Home/common_public.js?rev=ff45fa6577f949a884bd72f6d7000439" ></script>
+</block>
+
+
+
+<!-- view/zh_cn/Public/basev3.html -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <block name="meta">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+        <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+        <meta name="description" content="酒店和企业门禁管理系统，支持酒店员工管理,支持在线分配房卡，支持手机端操作，支持同时间对多家酒店或企业进行管理，让酒店和企业门禁管理快捷，安全，酒店管理更高效。">
+        <meta name="keywords" content="锁掌柜，畅联科技，云钥匙，二维码锁，酒店门锁，门禁管理">
+        <meta name="author" content="畅联科技 <admin@uclbrt.com>">
+        <meta name="renderer" content="webkit">
+    </block>
+    <block name="metaViewport">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <!-- <meta name="viewport" content="width=device-width"> -->
+    </block>
+    <block name="title">
+        <title>畅联科技</title>
+    </block>
+    <block name="baseStyle">
+        <!--Core CSS -->
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/uclbrt/ulite/ulite.min.css?rev=1c869410b575da3819b5be739df9372b">
+    </block>
+    <block name="IE8Js">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="__PUBLIC__/jslib/html5shiv/3.7.2/html5shiv.min.js" ></script>
+        <script type="text/javascript" src="__PUBLIC__/jslib/respond.js/1.4.2/respond.min.js" ></script>
+        <![endif]-->
+    </block>
+    <link rel="apple-touch-icon" href="/Public/uclbrt/image/favicon-apple.png">
+    <link rel="shortcut icon" href="__PUBLIC__/uclbrt/image/favicon.ico">
+    <script type="text/javascript" src="__PUBLIC__/jslib/jquery/1.11.2/jquery.min.js" ></script>
+    <!--some css or js stuff which sub html needed include in head-->
+    <block name="extendHead"></block>
+</head>
+
+<body>
+    <block name="document">
+        <div id="doc">
+        </div>
+    </block>
+    <block name="baseFootJs">
+        <script type="text/javascript" src="__PUBLIC__/uclbrt/ulite/ulite.min.js?rev=34d5ff2da4bec183ccaa1c6ddd54d039" ></script>
+        <script type="text/javascript" src="__PUBLIC__/jslib/art-template/template-native.js?rev=c39582825631415f85ec5232c01dccff" ></script>
+        <!--[if lt IE 10]>
+        <script type="text/javascript" src="__PUBLIC__/jslib/placeholder/2.3.1/jquery.placeholder.min.js" ></script>
+        <script type="text/javascript" >
+            $(function(){
+                $('input, textarea').placeholder();
+            });
+        </script>
+        <![endif]-->
+        <script type="text/javascript" src="/Public/dist/Home/config.js?rev=8ab283c840f11e3ba9a95c9c4fa3ddf6"></script>
+        <script type="text/javascript" src="__PUBLIC__/jslib/js-cookie/2.0.3/js.cookie.js"></script>
+        <script type="text/javascript" src="/Public/dist/Home/common_control.js?rev=0fed29609b0fb89572a3e848fe5624c3" ></script>
+        <script type="text/javascript" src="/Public/dist/Home/common_zh_cn.js?rev=15da15aaf5833e5403ea6730d6c85397" ></script>
+    </block>
+    <!--some js stuff which sub html needed include in foot-->
+    <block name="extendFootJs"></block>
+</body>
+
+</html>
+
+
+<!-- zh_cn:Public:Include_setting_side -->
+<div id="doc-side" class="pull-left">
+    <div id="doc-side-main-menu">
+        <ul class="menu-vertical menu-vertical-cn">
+            <li class="[doc-side-account]">
+                <a href="/Home/AccountPage/index.html?hotel={$currentHotel}" class="ulite-js-menu ulite-js-ripple-effect"><span class="glyphicon iconfont icon-user"></span><span class="menu-vertical-text">账号管理</span></a>
+            </li>
+            <li class="[doc-side-hotel]">
+                <a href="/Home/RoomPage/index.html?hotel={$currentHotel}" class="ulite-js-menu ulite-js-ripple-effect"><span class="glyphicon iconfont icon-layout"></span><span class="menu-vertical-text">集群房型</span></a>
+            </li>
+            <li class="[doc-side-yun]">
+                <a href="/Home/YunPage/index.html?hotel={$currentHotel}" class="ulite-js-menu ulite-js-ripple-effect"><span class="glyphicon iconfont icon-hotel"></span><span class="menu-vertical-text">云客栈</span></a>
+            </li>
+            <li class="[doc-side-police]">
+                <a href="/Home/PolicePage/index.html?hotel={$currentHotel}" class="ulite-js-menu ulite-js-ripple-effect"><span class="glyphicon iconfont icon-police"></span><span class="menu-vertical-text">对接公安</span></a>
+            </li>
+            <li class="[doc-side-customMenu]">
+                <a href="/Home/PolicePage/index.html?hotel={$currentHotel}" class="ulite-js-menu ulite-js-ripple-effect"><span class="glyphicon iconfont icon-police"></span><span class="menu-vertical-text">[customMenu]</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 引入上面html文件 -->
+<include file="zh_cn:Public:Include_setting_side" doc-side-hotel="active" />
+<include file="zh_cn:Public:Include_setting_side" doc-side-customMenu="active" customMenu="自定义菜单"/>
+
+
+
+<!--内容填写-->
+<div class="content-panel" style="overflow:hidden"  id="community-container">
+    <div class="content-panel-header">
+        <div class="content-panel-title">锁掌柜集群
+        </div>
+        <div class="content-panel-operation">
+            <div class="closeBtn" id="back-syn-btn"><span class="glyphicon glyphicon-remove"></span></div>
+        </div>
+    </div>
+    <div class="content-panel-body">
+        <empty name="community">
+            <div class="content-panel-empty vertical-middle-block sm-height typo-body-1">
+                <div class="vertical-middle-block-cell"><a href="http://qrm.uclbrt.com">点我请去锁掌柜认证集群。</a></div>
+            </div>
+            <else />
+            <div class="content-panel-help"></div>
+            <table class="table content-panel-table">
+                <thead>
+                <tr>
+                    <th>集群名称</th>
+                    <th>房间总数</th>
+                    <th>可托管房间数</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="roomTypeList">
+                <volist name="community" id="vo">
+                    <tr>
+                        <td>{$vo.name}</td>
+                        <td>{$vo.room_amount}</td>
+                        <td>{$vo.can_sync_room_amount}</td>
+                        <td class="col-xs-3">
+                            <if condition='$vo.enable eq 1'>
+                                <if condition='$vo.can_sync_room_amount neq 0'>
+                                    <div class="btn-link btn-continueSyn" data-value="hotel={$vo.hotel}&masterentity={$vo.id}">申请托管</div>
+                                    <else/>
+                                    <div class="grey-link"><span title="可托管房间数为0">申请托管</span></div>
+                                </if>
+                            <else/>
+                                <div class="grey-link"><span title="集群已禁用">申请托管</span></div>
+                            </if>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </empty>
+        <div class="content-panel-help">
+            <a href="http://qrm.uclbrt.com">非酒店类或者非公寓类请与客服联系。</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="serviceSub">
+    <div class="service-name">
+        <img src="/Public/src/Home/UserCenterPage/image/pmsProductSingle.png" alt="">
+        <div class="nameAndExpire">
+            <p>房态服务：{$pmsProductSingle['name']}</p>
+            <p>
+                <span class="{:empty($pmsServiceSingle) ? 'hidden':'expire'}">
+                    {:empty($pmsServiceSingle) ? '永久有效' : '有效期至' . substr($pmsServiceSingle['enddate'], 0,10)}
+                </span>
+                <span class="{:empty($pmsServiceSingle) ? 'text-success':'hidden'}">
+                    <span class="glyphicon glyphicon-check"></span>
+                    未开通
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="text-left service-desc">
+        <p>{$pmsProductSingle['description']}</p>
+        <div class="service-operator">
+            <notempty name="pmsServiceSingle">
+                <div
+                    class="btn-link"
+                    data-toggle="modal"
+                    data-target="#pmsStyleBuy"
+                    data-id="{$pmsServiceSingle.product_id}"
+                    data-price="{$pmsServiceSingle.price}"
+                    data-name="{$pmsServiceSingle.name}"
+                    data-identity="{$pmsServiceSingle.identity}"
+                    data-type="{$pmsServiceSingle.product_type}"
+                >
+                    服务续费
+                </div>
+            </notempty>
+                <div
+                    class="btn-link upgrade hidden">
+                    套餐升级
+                </div>
+        </div>
+    </div>
+</div>

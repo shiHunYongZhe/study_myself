@@ -1,0 +1,156 @@
+#main p {
+  color: #00ff00;
+  width: 97%;
+
+  .redbox {
+    background-color: #ff0000;
+    color: #000000;
+    width: 200px;
+  }
+  
+  p {
+    @if 7 > 0 {width: 200};
+    @if 1 + 1 == 2 { border: 1px solid; }
+    @else if 5 > 3 { border: 2px dotted; }
+    @if 6 > 4  { border: 3px double; }
+  }
+}
+@each $animal in puma, sea-slug, egret, salamander {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+  }
+}
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} { width: 2em * $i; }
+  $i: $i - 2;
+}
+
+$nav-color: #F90;
+$nav-color: #ff0 !default;
+// $nav-color: #F00;
+nav {
+  $width: 100px;
+  width: $width;
+  color: $nav-color;
+}
+
+#content {
+  aside { background-color: #EEE }
+  
+  &:hover { color: red }
+  &-asid {border: {
+    left: {
+      width: 2px;
+      style: solid;
+    }
+    right: 6px;
+  }}
+  ~ article {  border: 1px solid #ccc {
+    left: 0px;
+    right: 0px;
+    } 
+  }
+  > section { background: #eee }
+  dl > {
+    dt { color: #333 }
+    dd { color: #555 }
+  }
+  nav + & { margin-top: 0 }
+}
+
+nav, aside {
+  a {color: blue}
+}
+
+/* 这块注释内容会出现在生成的css中 */
+// 这块注释内容不会出现在生成的css中
+body {
+  color /* 这块注释内容不会出现在生成的css中 */: #333;
+  padding: 1 /* 这块注释内容也不会出现在生成的css中 */;
+  &:before{content: "I ate #{5 + 10} pies!";}
+  &:after{content: "Foo " + Bar;
+    font-family: sans- + "serif";}
+}
+
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.notice {
+  background-color: green;
+  border: 2px solid #00aa00;
+  @include rounded-corners;
+}
+
+//通过选择器继承继承样式
+.error {
+  border: 1px solid red;
+  background-color: opacify($nav-color, 0.3);;
+}
+.seriousError {
+  @extend .error;
+  border-width: 3px;
+}
+
+
+$media: screen;
+$feature: -webkit-min-device-pixel-ratio;
+$value: 1.5;
+// #{$value} 和 $value 的区别是#{$value}编译后不再运算，而$value结合运算符会自动运算 
+// line-height: #{$value} * 2 编译后显示为 line-height: 1.5 * 2
+// line-height: $value * 2 编译后显示为 line-height: 3
+@media #{$media} and ($feature: $value) {
+  .sidebar {
+    width: 500px;
+  }
+}
+
+#admin .tabbar a {
+  font-weight: bold;
+}
+#demo .overview .fakelink {
+  @extend a;
+}
+
+
+@mixin apply-to-ie6-only {
+  * html {
+    @content;
+  }
+}
+@include apply-to-ie6-only {
+  #logo {
+    background-image: url(/logo.gif);
+  }
+}
+
+
+$grid-width: 40px;
+$gutter-width: 10px;
+
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+
+#sidebar { width: grid-width(5); }
+
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  0x
+  0b
+  0
+}
+

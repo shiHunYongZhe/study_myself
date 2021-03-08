@@ -1,0 +1,75 @@
+安装docker
+https://houdunren.gitee.io/note/docker/1%20docker.html#%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83
+卸载旧版本
+
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+
+安装工具包
+
+sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+
+添加软件仓库
+
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+    
+sudo yum-config-manager --enable docker-ce-nightly
+sudo yum-config-manager --enable docker-ce-test
+sudo yum-config-manager --disable docker-ce-nightly
+
+#安装软件
+默认源里的containerd.io版本太低，需要安装最新版本
+
+sudo yum -y install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
+
+安装最新版本DOCKER
+
+sudo yum install -y docker-ce docker-ce-cli containerd.io
+
+查看是否安装成功
+
+docker -v
+
+启动DOCKER
+
+sudo systemctl start docker
+
+将 docker 加入系统启动服务，使其开机自动运行
+
+sudo systemctl enable docker
+
+通过运行hello-world 映像来验证安装，会下载镜像并在容器中运行
+
+sudo docker run hello-world
+
+
+
+docker下载mysql
+docker run --name mysql5.7 --rm -e MYSQL_ROOT_PASSWORD=admin888 -e MYSQL_DATABASE=wordpress -d mysql:5.7.28
+--name	新建容器的名称
+--rm	容器关闭后自动删除
+-e MYSQL_ROOT_PASSWORD=admin888	数据库root帐号密码
+-e MYSQL_DATABASE=wordpress	创建数据库wordpress
+mysql:5.7.28	使用的镜像
+
+执行docker安装的mysql
+docker exec -it mysql5.7 mysql -uroot -padmin888
+
+参数	说明
+-it	为容器分配终端来通信，这样就可以发送命令
+mysql5.7	连接的容器
+mysql -uroot -padmin888	向容器发送的指令
+
+
+
+
