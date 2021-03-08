@@ -28,16 +28,6 @@
     text-align: center;
 }
 ```
-## 多行文字超出省略号
-```
-.example {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* 指定超过2行省略号 */
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-```
 ## 自动加载省略符号
 ```
 <dot>...</dot>
@@ -109,7 +99,6 @@ cursor: url(images/Arrow.cur), auto;
 ## 是否阻塞文档
 使用link标签引用的 css文件，不会阻塞DOM的解析,但是会阻塞DOM的渲染
 
-## 对比border:0;与border:none;之间的区别在于有渲染和没渲染，感觉他们和display:none;与 visibility:hidden;的关系类似,个人更向于使用border:none;
 复选框 `checkbox` 样式美化
 ```html
   <input type="checkbox" id='awesome'>
@@ -141,8 +130,7 @@ cursor: url(images/Arrow.cur), auto;
   }
 ```
 ## 元素垂直居中
-
-### 基于绝对定位
+**基于绝对定位**
 - 传统方式，元素的宽高必须确定，适应性不太好
 ```html
   <main>
@@ -245,4 +233,36 @@ css.innerHTML = `* { background-color: rgba(255,0,0,.2); }
 * * * * * * * * * * { background-color: rgba(0,0,255,.2); }
 `
 document.querySelector('head').appendChild(css)
+```
+
+## 链接嵌套链接
+```
+a标签里再嵌套一层链接，可以通过在a标签里嵌套map，通过其area的href实现
+<!-- 借助area元素实现的链接嵌套功能实例页面 -->
+<a href="/book/1003477570/369104934" class="book-layout" target="_blank">
+    <img src="book.jpg" class="book-cover" alt="都市猎人 限时免费" usemap="#bookCover">
+    <map id="bookCover" name="bookCover">
+        <area shape="rect" coords="0,0,200,21" href="/book/1003477570" alt="都市猎人 限时免费" target="_blank">
+    </map>
+<a>
+```
+
+-  解决margin折叠问题
+子元素明明设置了margin值，但是却没有撑开父元素，此时只要给父元素设置overflow:hidden；或者触发BFC即可。
+
+- Chrome小于12px字体解决方法
+font-size:10px;-webkit-transform:scale(0.8);display:block;
+
+
+- z-index没有生效
+有时候是没有定义position属性，如果不想让元素的位置有所变化，就给赋予z-index属性的元素加上相对定位的position:relative;
+
+# 动态样式文件
+改变皮肤link元素的href地址。例如：
+```css
+<link id="skinLink" href="skin-default.css" rel="stylesheet" type="text/css">
+```
+换皮肤的时候JS改变href属性值：
+```js
+skinLink.href = 'skin-red.css';
 ```

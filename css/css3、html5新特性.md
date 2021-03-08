@@ -1,22 +1,19 @@
-# W3C明确表示，CSS没有版本只有等级（level）
-伪元素是由两个 :: 和伪元素组成的，引入两个 :: 的目的为了区分伪元素和伪类的，对于一些老旧的的项目，比如需要兼容 IE8 及以下的浏览器建议还是使用 :，对于不需要支持低版本浏览器和移动端项目的建议使用 :: 来做区分。
-- `::after`、`::before`、`::first-letter`、`::first-line`、`::selection` 等是伪元素
-- `:active`、`:hover`、 `:focus`、 `:visited`、`:checked`、`:disabled`、`:empty` 等称为伪类
 
 ```css
-	display:flex;  //弹性盒模型
 	display:grid;  //栅格模型相关属性
-	outline：1px solid #f00;  //外轮廓
+  outline: 1px dash #ccc;  外轮廓（不占实际空间，只有显示效果）
 	outline-offset:2px  //外轮廓边距（可为负值, 当设置比元素还大的负值时可生成中心的 “+” 符号）
+  box-shadow: 2px 2px 2px rgba(180,160,120,.9);  //盒子阴影，有时可用来变相设置"多个边框"，把前三个属性值都设置为0即可
+  
+  注解：（对盒子的before、after无效，此时应使用filter: drop-shadow(2px 2px 2px rgba(180,160,120,.9))）
 	font-size-adjust:100%;  //字体改变时文字大小不变
-	text-stroke: 1px #f00; //打造文字描边
-	text-shadow:0 0 5px red; //打造文字阴影
-	text-fill-color:transparent; //打造镂空文字：
+	text-stroke: 1px #f00; //打造文字描边(注意兼容性)
+	text-fill-color:transparent; //打造镂空文字(注意兼容性)：
 	shape-outside: margin-box; 元素外部形状环绕(与float配合使用，最常用的是图片和文字搭配)
-	clip-path: circle(50% at center);  原理是根据图形来创建路径。当使用这些值创建一条完整路径时，就会把图像按照路径内部的尺寸进行裁剪。
+	clip-path: circle(50% at center); 原理是根据图形来创建路径。当使用这些值创建一条完整路径时，就会把图像按照路径内部的尺寸进行裁剪，适用一切元素
 　　利用clip-path，我们可以创建圆形、椭圆和多边形等不同的形状，创造力是唯一的限制。
 	background-clip:text  //文字应用背景
-	width:calc(100% - 50px); //计算属性（calc）运算符号两侧要有空格 
+	width:calc(100% - 50px); //计算属性（calc）里面的运算符号两侧要有空格 
 	marker-offset  //列表项与项目符号的距离
 	caption-side:top|bottom|left|right   //标题位于表格的哪一侧
 	empty-cells:hide|show  //表格单元格内容为空时是否显示边框
@@ -47,7 +44,7 @@ hr{
 
 ## HTML5新属性
 - `requestAnimationFrame`和`cancelAnimationFrame`可取代`setInterval`和`clearInterval`
-- `classList`的使用  
+- `classList`的使用
 - `querySelector`和`querySelectorAll`
 - `addEventListener`和`removeEventListener`
 

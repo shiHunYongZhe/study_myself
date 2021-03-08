@@ -2,7 +2,7 @@
 - jquery  最常用的dom操作库，cdn地址可使用<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 - bootstrap工具库如datapicker、datarangepicker
 - animate.js h5动画库
-- moment.js  JavaScript 日期处理类库
+- moment.js  JavaScript 日期处理类库(可用day.js 替代)
 - three.js - JavaScript 3D 库。超多的 examples 等着你去发现，你只需要关注内存和风扇就行了
 - ECharts - 好用，最关键的是支持的图表展示非常之多，强烈推荐，highchart则功能少些，但也可用
 - gsap     svg图形操作库
@@ -18,36 +18,40 @@
 - cropper.js   国人开发的图片裁剪库
 - filesaver.js  保存文件库（核心把其他资源保存为blob,不支持new Blob的浏览器无法使用）
 - layer.js  弹出框js库
-- crypto   -- 前端加密库，保存密码时本地存储可使用（提交表单仍使用原密码），比base64加密性高
 - select2.js  -好看的多选框
 ## 一些语法
-js中尽可能不要使用eval、==（使用全等===代替）、with语法，一大堆问题
+数组遍历时不要使用for in，因为这个时候可能会把原型链上的一些属性或方法也加入迭代
+在检测一个变量是否已经定义可以使用typeof 变量 !== 'undefined'
+检测一个对象的类型，强烈推荐使用 Object.prototype.toString 方法
+instanceof 操作符用来比较两个操作数的构造函数。只有在比较自定义的对象时才有意义
+js中尽可能不要使用eval、==（使用全等===代替）、with语法、arguments.callee，会引发一大堆异常问题
+## js
+- 防抖动和节流本质是不一样的。防抖动是将多次执行变为最后一次执行，节流是将多次执行变成每隔一段时间执行。
+#### script标签中defer和async的区别是什么？
 ```
-<h2>技术博客：</h2>
-<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/">无数的资源再等着你探索，追标准和新特性肯定得重点关注的网站</a></li>
-<li><a href="https://www.awesomes.cn/">国人维护的前端资源库，深度对接到 Github，分类和展现清晰，值得收藏</a></li>
-<li><a href="https://www.liaoxuefeng.com/">廖雪峰的官方博客</a></li>
-<li><a href="https://www.zhangxinxu.com/wordpress/">成名多年的、高产的前端大湿，CSS猛人</a></li>
-<li><a href="http://doc.liangxinghua.com/vue-family/1.html" title="Vue教程">一个私人的vue教程</a></li>
-<li><a href="https://jspang.com/posts/2017/01/11/all-video-list.html" title="前端私人教程">jspang的前端教程</a></li>
-</ul>
+默认情况下，脚本的下载和执行将会按照文档的先后顺序同步进行。当脚本下载和执行的时候，文档解析就会被阻塞，在脚本下载和执行完成之后文档才能往下继续进行解析。
+
+下面是async和defer两者区别：
+
+当script中有defer属性时，脚本的加载过程和文档加载是异步发生的，等到文档解析完(DOMContentLoaded事件发生)脚本才开始执行。
+
+当script有async属性时，脚本的加载过程和文档加载也是异步发生的。但脚本下载完成后会停止HTML解析，执行脚本，脚本解析完继续HTML解析。
+
+当script同时有async和defer属性时，执行效果和async一致。
+```
+
+```
 <h2>素材资源：</h2>
 <ul>
-<li><a href="http://www.17sucai.com/">17素材网</a></li>
 <li><a href="http://www.js-css.cn/" title="JS代码网">JS代码网</a></li>
-<li><a href="http://thebestofyouth.com/bsgrid/" title="内部系统数据库数据展示">jQuery.bsgrid</a></li>
 <li><a href="http://hao.uisdc.com/" title="设计师网址导航">设计师网址导航</a></li>
-<li><a href="http://font.chinaz.com/" title="字体下载">字体中国</a></li>
 <li><a href="http://www.qiuziti.com/" title="按照图片找文字">求字网</a></li>
 <li><a href="http://www.apkui.com/" title="安卓应用UI界面精选">安卓应用UI界面精选</a></li>
 <li><a href="http://www.ui4app.com/" title="ui4app">IOS应用UI界面</a></li>
 <li><a href="http://www.webppd.com/" title="产品原型设计">webppd</a></li>
-<hr>
 <li><a href="http://www.lanrentuku.com/" title="懒人图库">懒人图库</a></li>
 <li><a href="http://www.zcool.com.cn/" title="zcool">站酷</a></li>
 <li><a href="http://365psd.com/" title="365psd">365psd</a></li>
-<li><a href="http://www.sucaihuo.com/" title="手机网站模板">素材火</a></li>
 <hr>
 <li><a href="http://aeditor.alloyteam.com/" title="H5交互页编辑器AEditor">AEditor</a></li>
 <li><a href="http://www.baomitu.com/" title="在线移动专题制作">爆米兔</a></li>
@@ -57,13 +61,6 @@ js中尽可能不要使用eval、==（使用全等===代替）、with语法，�
 <h2>工具导航：</h2>
 <ul>
 <li><a href="https://tool.lu/" title="在线工具">html,css,js工具，正则表达式测试，颜色格式转换，进制转换，占位图片，app icon自动生成@2x,@3x /n莫斯密码加密解密，汇率计算，数字转大写，中文简繁体转换，IT词汇发音</a></li>
-<li><a href="http://tools.jb51.net/table">脚本之家常用参考表对照</a></li>
-<li><a href="https://c.runoob.com/" title="在线工具">菜鸟工具</a></li>
-<li><a href="https://www.bootcdn.cn/" title="cdn网站">cdn资源</a></li>
-<li><a href="https://www.iconfont.cn/search/index" title="iconfont">iconfont矢量库</a></li>
-<li><a href="https://icomoon.io/app/#/select" title="icomoon网站">icomoon(类似iconfont)</a></li>
-<li><a href="https://tinypng.com/" title="图片在线压缩优化">tinypng图片在线压缩优化</a></li>
-<li><a href="https://zhitu.isux.us/" title="图片优化平台">智图图片优化</a></li>
 <li><a href="https://loading.io/" title="loading图标">loading图标制作</a></li>
 <li><a href="http://cli.im/" title="草料二维码生成器">二维码生成器</a></li>
 <li><a href="https://bennettfeely.com/clippy/">clip-path任意形状切割图片</a></li>

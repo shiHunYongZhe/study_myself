@@ -44,3 +44,14 @@ CSS像素是一个抽像的单位，主要使用在浏览器上，用来精确�
 document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
 ```
 
+- fixed在某些情况下可能导致容器内的子元素的1px边框线消失，即使使用z-index也无法解决。
+解决方法：可以使用translateZ属性来解决
+
+- fixed定位的容器内不能带有input，这是常见的bug。
+解决方法： 在input聚焦的时候去掉fixed定位状态，改为absolute。
+
+- fixed＋可滚动的容器内会导致fixed定位的子元素在滚动时定位失效，滚动完成后才正常回到fixed的位置。
+解决方法：尽量不要在可滚动的容器内包含fixed定位的子元素。
+
+使用iPhone的用户都知道，Safari浏览器是苹果家传的浏览器，使用起来各方面体验都很好，就是不支持下载功能，一个浏览器不支持下载功能还算是真正的浏览器吗？于是iOS13将在自家浏览器Safari加入下载管理功能，让用户更方便确认下载内容，也可能会与iOS档案 App整合.
+- ios13之前的浏览器不支持a标签下载文件
