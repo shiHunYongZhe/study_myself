@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+// 有时候可在目录下依次使用以下命令生成私钥和公钥，然后加密使用私钥，解密使用公钥
+// openssl
+// > genrsa -out private.key 1024
+// > rsa -in private.key -pubout -out public.key
 process.env.SECRET_KEY = "secret";
 app.use(express.json())
 app.get("/",(req,res) => {

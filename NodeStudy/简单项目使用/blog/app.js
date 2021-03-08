@@ -43,15 +43,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 console.log(config.get('title'))
 
-/**
-以下代码用来读取json文件
-const ROOT_PATH = process.cwd();
-const PKG_JSON_PATH = path.join( ROOT_PATH, 'package.json' );
-const PKG_JSON_STR = fs.readFileSync(PKG_JSON_PATH, 'binary');
-const PKG_JSON = JSON.parse(PKG_JSON_STR);
-console.log(PKG_JSON)
- */
-
 // 获取系统环境变量 返回值是对象 
 if (process.env.NODE_ENV == 'development') {
 	// 当前是开发环境
